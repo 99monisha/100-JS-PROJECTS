@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in Page</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<form name="sec1" method="post" action="#"onsubmit="return realform()">
+Name:<input type="text" name="name"><br/>
+Password:<input type="password" name="password"><br/>
+<input type="submit" value="register">
+
+</form>
+
+
+<script>
+    function realform(){
+        var name=document.sec1.name.value;
+        var password=document.sec1.password.value;
+        if(name==null || name=="")
+        {
+            alert('please enter your name!!');
+            return false;
+        }
+        else if(password.length<6)
+        {
+            alert('please enter a valid password');
+            return false; 
+        }
+
+    }
+</script>
+    </body>
+</html>

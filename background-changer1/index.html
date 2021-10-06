@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background-changer</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            align-items: center;
+            justify-content: center;
+            transition: 0.5s;
+
+        }
+        .change-btn{
+            background-color: crimson;
+            color: darkgrey;
+            font-size: 22px;
+            padding: 22px 25px;
+            transition: 00.5s;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        .change-btn:hover{
+            padding: 32px 35px;
+            
+            font-size: 25px;
+         }
+        .color-text{
+            padding-top: 5px;
+            font-size: 21px;
+        }
+       
+
+    </style>
+</head>
+<body>
+<button id="change" class="change-btn">
+    Change Your bg Color
+</button>
+<p id="color" class="color-text">rgb(255,255,255)</p>
+
+
+
+
+    <script type="text/javascript">
+    const change = document.getElementById('change');
+    const color = document.getElementById('color');
+    const body = document.body;
+
+    change.addEventListener('click', changeBG);
+  
+    function changeBG(){
+        const col1 = getColor();
+    const col2 = getColor();
+    const col3 = getColor();
+    const colorString = `rgb(${col1}, ${col2}, ${col3})`;
+    body.style.background = colorString;
+    color.innerText = colorString;
+
+    console.log(colorString)
+
+
+
+    }
+    function getColor(){
+        return Math.floor(Math.random() * 256);
+    }
+    </script>
+</body>
+</html>

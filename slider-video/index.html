@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>video slider</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+        section{
+            position: relative;
+            width: 100%;
+            height: 100vh;
+        }
+        section #videonat{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        section .nav{
+position: absolute;
+bottom: 10%;
+left: 50%;
+transform: translateX(-50%);
+display: flex;
+z-index: 100;
+justify-content: center;
+
+align-items: center;
+
+}
+section .nav li{
+    list-style: none;
+    cursor: pointer;
+    border-radius:14px;
+    margin: 0 10px;
+    padding: 4px 4px 0;
+    background: #000;
+    transition: 0.5s;
+}
+section .nav li:hover{
+opacity: 1;
+}
+section .nav li img{
+    width: 130px;
+   transition: 0.5s;
+}
+section .nav li img:hover{
+    width: 190px;
+}
+
+    </style>
+</head>
+<body>
+    <section>
+        <videonat id="slider" autoplay muted loop>
+            <source src="video/video1.mp4" type="video1/mp4">
+        </videonat>
+       <ul class="nav">
+           <li onclick="videourl('video1.mp4')" ><img src="images/client-2.jpg"></li>
+           <li><img src="images/client-1.jpg"></li>
+           <li><img src="images/client-2.jpg"></li>
+           <li><img src="images/client-1.jpg"></li>
+       </ul>
+    </section>
+
+
+
+
+
+    <script type="text/javascript">
+function videourl(myvid){
+    document.getElementById('slider').src = myvid;
+
+}
+    </script>
+</body>
+</html>

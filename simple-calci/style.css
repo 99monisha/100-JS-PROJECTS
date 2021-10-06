@@ -1,0 +1,55 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    background:gray;
+
+
+}
+.calsi{
+    position: relative;
+    display: grid;
+}
+.calsi .value{
+    grid-column: span 4;
+    height: 110px;
+    text-align: right;
+    border: none;
+    outline: none;
+  
+
+}
+.calsi span{
+    display: grid;
+    width:70px;
+    height:70px;
+    place-items:center;
+    background: #fff0;
+    color: black;
+    border: 1px solid antiquewhite;
+    font-size: 30px;
+    font-weight: 700;
+}
+.calsi span:active{
+    background:rgb(221, 172, 182);
+    color:lightslategrey;
+}
+.calsi span.clear{
+grid-column: span 2;
+width: 144px;
+background:palevioletred;
+}
+.calsi span.plus{
+ grid-row: span 2;
+height: 144px;
+    }
+    .calsi span.equal{
+       background:steelblue;

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form class="calsi" name="caa">
+        <input class="value" type="text" name="tet" readonly="">
+        <span class="no clear" onclick="document.caa.tet.value=''">c</span>
+        <span class="no" onclick="document.caa.tet.value +='/'">/</span>
+        <span class="no" onclick="document.caa.tet.value +='*'">*</span>
+        <span class="no" onclick="document.caa.tet.value +='7'">7</span>
+        <span class="no" onclick="document.caa.tet.value +='9'">8</span>
+        <span class="no" onclick="document.caa.tet.value +='9'">9</span>
+        <span class="no" onclick="document.caa.tet.value +='-'">-</span>
+        <span class="no" onclick="document.caa.tet.value +='4'">4</span>
+        <span class="no" onclick="document.caa.tet.value +='5'">5</span>
+        <span class="no" onclick="document.caa.tet.value +='6'">6</span>
+        <span class="no plus" onclick="document.caa.tet.value +='+'">+</span>
+        <span class="no" onclick="document.caa.tet.value +='3'">3</span>
+        <span class="no" onclick="document.caa.tet.value +='2'">2</span>
+        <span class="no" onclick="document.caa.tet.value +='1'">1</span>
+        <span class="no" onclick="document.caa.tet.value +='0'">0</span>
+        <span class="no" onclick="document.caa.tet.value +='00'">00</span>
+        <span class="no" onclick="document.caa.tet.value +='.'">.</span>
+        <span class="no equal" onclick="document.caa.tet.value = eval(caa.tet.value)">=</span>
+
+
+    <script src="script.js"></script>
+    </body>
+</html>
