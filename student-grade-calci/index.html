@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="section">
+        <div id="head">
+            <h1>STUDENT GRADE MAKER</h1></div>
+            <label>COMPUTER</label>
+            <input type="text" id="com"><br>
+            <label>COMPUTER</label>
+            <input type="text" id="graph"><br>
+            <label>COMPUTER</label>
+            <input type="text"id="phy"><br>
+            <label>COMPUTER</label>
+            <input type="text" id="chem"><br>
+            <label>COMPUTER</label>
+            <input type="text"id="math"><br><br>
+            <button class="btn" onclick="total()">Total</button>
+            <button class="btn1" onclick="average()">Average</button>
+            <button class="btn2" onclick="grade()">Grade</button>
+        </div>
+
+        <div id="result">
+            <div id="head1">
+                <h1>TOTAL</h1> </div>
+                <div id="total"></div>
+       
+        <div id="head2">
+            <h1>TOTAL</h1>  </div>
+            <div id="average"></div>
+  
+    <div id="head3">
+        <h1>TOTAL</h1>  </div>
+        <div id="grade"></div>
+
+</div>
+<script>
+
+function total(){
+    var sub1 = parseInt(document.getElementById('com').value);
+    var sub2 = parseInt(document.getElementById('graph').value);
+    var sub3 = parseInt(document.getElementById('phy').value);
+    var sub4 = parseInt(document.getElementById('chem').value);
+    var sub5 = parseInt(document.getElementById('math').value);
+
+    if(sub1>100 || sub2>100 || sub3>100 || sub4>100 || sub5>100){
+        alert("please enter a valid markss");
+
+    }
+    else{
+        var totol = sub1+sub2+sub3+sub4+sub5;
+        document.getElementById("total").innerHTML = "comuter marks :"+sub1+ " <br> 
+        graph marks :"+sub2+"<br> physi marks :"+sub3+"<br> chemstry marks : "+sub4+"<br> mathmatics marks : "+sub5+"<br>____________________<br> total marks :"+total;
+    }
+}
+function average(){
+    var sub1 = parseInt(document.getElementById("com").value);
+    var sub2 = parseInt(document.getElementById("graph").value);
+    var sub3 = parseInt(document.getElementById("phy").value);
+    var sub4 = parseInt(document.getElementById("chem").value);
+    var sub5 = parseInt(document.getElementById("math").value);
+
+    if(sub1>100 || sub2>100 || sub3>100 || sub4>100 || sub5>100){
+        alert("please enter a valid markss");
+
+    }
+    else{
+        var total = sub1+sub2+sub3+sub4+sub5;
+        var Avg=total/5;
+        document.getElementById("avg")="average marks is:"+Avg;
+
+}
+function grade(){
+    var sub1 = parseInt(document.getElementById("com").value);
+    var sub2 = parseInt(document.getElementById("graph").value);
+    var sub3 = parseInt(document.getElementById("phy").value);
+    var sub4 = parseInt(document.getElementById("chem").value);
+    var sub5 = parseInt(document.getElementById("math").value);
+
+    if(sub1>100 || sub2>100 || sub3>100 || sub4>100 || sub5>100){
+        alert("please enter a valid markss");
+
+    }
+    else{
+        var total = sub1+sub2+sub3+sub4+sub5;
+        var Avg=total/5;
+        if(Avg>=90 && Avg<=100){
+            document.getElementById("grade").innerHTML="your grade is : A"
+        }
+      else if(Avg>=80 && Avg<=89){
+            document.getElementById("grade").innerHTML="your grade is : B+"
+        }
+        else if(Avg>=60 && Avg<=79){
+            document.getElementById("grade").innerHTML="your grade is : B"
+        }
+        else if(Avg>=50 && Avg<=59){
+            document.getElementById("grade").innerHTML="your grade is : C"
+        }
+        else if(Avg>=30 && Avg<=49){
+            document.getElementById("grade").innerHTML="your grade is : D"
+        }
+        else{
+            document.getElementById("grade").innerHTML="your are fail!!"
+        }
+    }
+</script>
+</body>
+</html>
