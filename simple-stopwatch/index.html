@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Simple Stopwatch</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .counter1{
+        text-align: center;
+            justify-content: center;
+            margin-top: 10%;
+        }
+        p{
+            font-size: 50px;
+        }
+        .counter{
+            font-size: 60px;
+            color: rgb(218, 31, 31);
+       }
+       button{
+            padding: 7px ;
+            background: rgb(224, 98, 40);
+        font-size: 15px;
+        color: #fff;
+        border: 1px solid rgb(73, 31, 21);
+       
+        cursor: pointer;
+        transition: 0.3s;
+        }
+        button:hover{
+      
+            padding: 9px ;
+            background: rgb(224, 81, 24);
+        font-size: 17px;
+      
+       
+        }
+    </style>
+</head>
+<body>
+    <div class="counter1">
+    <p>USE STOPWATCH</p>
+  <h1 class="counter" id="time">
+                <span id="hr">00:</span>
+                   <span id="min">00:</span>
+                      <span id="sec">00:</span>
+                      <span id="count">00</span>
+  </h1>
+  <button id="start" onclick="start()">START</button>
+  <button id="res" onclick="reset()">RESET</button>
+  <button id="stop" onclick="stop()">STOP</button>
+</div>
+    <script>
+        var hr=0;
+        var min =0;
+        var sec=0;
+        var count=0;
+        var timer =false;
+        function start()
+        {
+          timer = true;
+          stopwatch();
+        }
+        function stop()
+        {
+              timer = false;
+        }
+        function reset()
+        {
+            timer = false;
+               hr=0;
+         min =0;
+         sec=0;
+         count=0;
+         document.getElementById("hr").innerHTML="00";
+         document.getElementById("min").innerHTML="00";
+         document.getElementById("sec").innerHTML="00";
+         document.getElementById("count").innerHTML="00";
+        
+        }
+        function stopwatch(){
+            if(timer==true)
+            {
+               count+=1;
+if(count==100){
+    sec+=1;
+    count=0;
+}
+if(sec==60){
+    min+=1;
+    sec=0;
+}
+if(min==60){
+    hr+=1;
+    min=0;
+    sec=0;
+}
+var hrString = hr;
+var minString=min;
+var secString=sec;
+var countString=count;
+if(hr<10){
+    hrString ="0" + hrString;
+}
+if(min<10){
+    minString ="0" + minString;
+}
+if(sec<10){
+    secString ="0" + secString;
+}
+if(count<10){
+    countString ="0" + countString;
+}
+
+
+
+               document.getElementById("hr").innerHTML=hrString;
+               document.getElementById("min").innerHTML=minString;
+               document.getElementById("sec").innerHTML=secString;
+               document.getElementById("count").innerHTML=countString;
+                setTimeout("stopwatch()", 10);
+            }
+
+        }
+       
+          
+    </script>
+</body>
+</html>
