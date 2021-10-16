@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Simple Counter</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .counter1{
+        text-align: center;
+            justify-content: center;
+            margin-top: 10%;
+        }
+        h4{
+            font-size: 50px;
+        }
+        .counter{
+            font-size: 60px;
+            color: rgb(218, 31, 31);
+       }
+       button{
+            padding: 7px ;
+            background: rgb(224, 98, 40);
+        font-size: 15px;
+        color: #fff;
+        border: 1px solid rgb(73, 31, 21);
+       
+        cursor: pointer;
+        transition: 0.3s;
+        }
+        button:hover{
+      
+            padding: 9px ;
+            background: rgb(224, 81, 24);
+        font-size: 17px;
+      
+       
+        }
+    </style>
+</head>
+<body>
+    <div class="counter1">
+    <h4>RUN YOUR COUNTER</h4>
+  <h1 class="counter">0</h1>
+  <button id="inc" onclick=" change(inc)">INCREASE</button>
+  <button id="res" onclick=" change(res)">RESET</button>
+  <button id="dec" onclick=" change(dec)">DECREASE</button>
+</div>
+    <script>
+        var counter = document.querySelector('.counter');
+        let count =0;
+        function change(button)
+        {
+if(button==inc){
+    count+=1;
+}
+else if(button==dec)
+{
+ 
+    count-=1;
+}
+else if(button==res)
+{
+    count=0;
+}
+counter.innerHTML=count;
+return false;
+        }
+    </script>
+</body>
+</html>
