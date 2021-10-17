@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light off on mini Project</title>
+
+
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Courier New', Courier, monospace;
+            background: #fff;
+        }
+        .light-processs{
+            text-align: center;
+           margin-top: 8%;
+        
+        }
+        button{
+            padding: 10px ;
+            background: rgb(76, 233, 84);
+        font-size: 16px;
+        color: #000;
+        font-weight: 600;
+        border: 1px solid rgb(11, 63, 22);
+        border-radius: 8%;
+        cursor: pointer;
+        transition: 0.3s;
+        }
+        button:hover{
+      
+            padding: 12px ;
+            background: rgb(32, 143, 32);
+        font-size: 17px;
+      
+       
+        }
+    </style>
+
+
+</head>
+<body>
+    <div class="light-processs">
+    <h1>LOOK AT ME</h1>
+    <img id="bulb" src="close.jpg" width="300px" height="350px">
+    <p>
+        <button type="button" onclick="look(1)">OPEN UR FACE</button>
+        <button type="button" onclick="look(0)">CLOSE UR FACE</button>
+    </p>
+</div>
+
+
+    <script>
+        function look(show){
+            var imgg;
+            if(show==0)
+            {
+                imgg="close.jpg";
+            }
+            else{
+                imgg="open.jpg"
+            }
+            document.getElementById('bulb').src=imgg;
+        }
+    </script>
+</body>
+</html>
