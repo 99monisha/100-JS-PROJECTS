@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonial slider</title>
+  <style>
+      *{
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+        font-family: sans-serif;
+      }
+      .hero{
+          position: relative;
+          width: 100%;
+          height: 100vh;
+          background-color: rgba(128, 0, 128, 0.418);
+      }
+      .hero h1{
+          font-size: 40px;
+          color: #000;
+          padding-top: 80px;
+          text-align: center;
+      }
+      .slide-row{
+     width: 3200px;
+     display: flex;
+     transition: 0.5s;
+      }
+      .slide-col{
+          position: relative;
+          width: 800px;
+          height: 400px;
+      }
+      .user-img{
+position: absolute;
+top: 0;
+right: 0;
+height: 100%;
+
+     }
+     .user-img img{
+         height: 360px;
+         width: 270px;
+         border-radius: 13%;
+     }
+     .user-text{
+         position: absolute;
+         background: rgba(255, 255, 255, 0.253);
+         color: #000;
+         width: 550px;
+         height: 250px;
+         border-radius: 10px;
+         left: 0;
+         top: 50%;
+         transform: translateY(-50%);
+         padding: 45px;
+         z-index: 2;
+     }
+     .user-text p{
+         font-size: 18px;
+         line-height: 24px;
+     }
+     .user-text h3{
+         color: #000;
+         margin: 15px 0 6px;
+     }
+     .containor{
+         position: absolute;
+         width: 800px;
+         height: 400px;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%,-50%);
+     }
+     .controller{
+         position: absolute;
+         left: 50%;
+         bottom: -50px;
+         transform: translateX(-50%);
+     }
+     .btn{
+         display:inline-block;
+         background: #fff;
+         cursor: pointer;
+         width: 15px;
+         height: 15px;
+         margin: 4px;
+         border-radius: 50%;
+     }
+     .active{
+         width: 45px;
+     }
+     .testi{
+         overflow: hidden;
+         width: 100%;
+         height: 100%;
+     }
+
+  </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>OUR-CLIENTS</h1>
+        <div class="containor">
+            <div class="controller">
+                <span class="btn active"></span>
+                <span class="btn"></span>
+                <span class="btn"></span>
+            </div>
+            <div class="testi">
+            <div class="slide-row " id="slide">
+                <div class="slide-col">
+                    <div class="user-text">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Repellendus, culpa quisquam! Quia nihil iste nostrum, harum dolorum eaque!
+                             Odit autem modi tenetur cupiditate perspiciatis ut unde.</p>
+                             <h3>MOONISHA</h3>
+                             <p>Web-Designer</p>
+                    </div>
+                    <div class="user-img">
+                        <img src="images/o4.jpg" alt="">
+                     </div>
+                </div>
+    
+                <div class="slide-col">
+                    <div class="user-text">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Repellendus, culpa quisquam! Quia nihil iste nostrum, harum dolorum eaque!
+                             Odit autem modi tenetur cupiditate perspiciatis ut unde.</p>
+                             <h3>MOONISHA</h3>
+                             <p>Web-Designer</p>
+                    </div>
+                    <div class="user-img">
+                        <img src="images/o2.jpg" alt="">
+                     </div>
+                </div>
+    
+                <div class="slide-col">
+                    <div class="user-text">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Repellendus, culpa quisquam! Quia nihil iste nostrum, harum dolorum eaque!
+                             Odit autem modi tenetur cupiditate perspiciatis ut unde.</p>
+                             <h3>MOONISHA</h3>
+                             <p>Web-Designer</p>
+                    </div>
+                    <div class="user-img">
+                        <img src="images/o1.jpg" alt="">
+                     </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        
+    </div>
+    <script>
+var btn = document.getElementsByClassName("btn");
+   var slide = document.getElementById("slide");
+   btn[0].onclick=function(){
+       slide.style.transform="translatex(0px)";
+       for(i=0;i<3;i++){
+           btn[i].classList.remove("active");
+       }
+       this.classList.add("active");
+   }
+   btn[1].onclick=function(){
+       slide.style.transform="translatex(-800px)";
+       for(i=0;i<3;i++){
+           btn[i].classList.remove("active");
+       }
+       this.classList.add("active");
+   }
+   btn[2].onclick=function(){
+       slide.style.transform="translatex(-1600px)";
+       for(i=0;i<3;i++){
+           btn[i].classList.remove("active");
+       }
+       this.classList.add("active");
+       
+   }
+ </script>
+</body>
+</html>
