@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs page</title>
+    <style>
+  *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: sans-serif;
+  }
+  body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: rgba(0, 0, 0, 0.493);
+  }
+  .accro{
+      max-width: 800px;
+  }
+  .accro .container{
+      position: relative;
+      margin: 10px 20px;
+ }
+ .accro .container .label{
+     position: relative;
+     padding: 18px;
+     background:rgba(255, 255, 255, 0.5);
+     color: #000;
+     cursor: pointer;
+     font-size: 20px;
+     font-weight: 800;
+ }
+ .accro .container .label::before{
+     content: '+';
+     position: absolute;
+     top: 50%;
+     right: 20px;
+     transform: translateY(-50%);
+     font-size: 1.5em;
+ }
+ .accro .container.active .label::before{
+     content: '-';
+ }
+ .accro .container .content{
+     position: relative;
+   
+     background: #fff;
+     height: 0;
+     overflow: hidden;
+     transition: 0.5s;
+     overflow-y: auto;
+ }
+ .accro .container.active .content{
+     height: 150px;padding: 10px;
+ }
+    </style>
+</head>
+<body>
+    <div class="accro">
+        <div class="container active">
+            <div class="label">What is your name?</div>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Eligendi sint facilis nostrum vel ad perferendis asperiores 
+                        omnis sunt? Totam enim iusto voluptas accusamus soluta? Veritatis, amet.</p>
+                  </div>
+        </div>
+
+        <div class="container active">
+            <div class="label">What is your school name?</div>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Eligendi sint facilis nostrum vel ad perferendis asperiores 
+                        omnis sunt? Totam enim iusto voluptas accusamus soluta? Veritatis, amet.</p>
+                  </div>
+        </div>
+
+        <div class="container active">
+            <div class="label">How Old are you?</div>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Eligendi sint facilis nostrum vel ad perferendis asperiores 
+                        omnis sunt? Totam enim iusto voluptas accusamus soluta? Veritatis, amet.</p>
+                  </div>
+        </div>
+        <div class="container active">
+            <div class="label">Why should we hire you?</div>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Eligendi sint facilis nostrum vel ad perferendis asperiores 
+                        omnis sunt? Totam enim iusto voluptas accusamus soluta? Veritatis, amet.</p>
+                  </div>
+        </div>
+        <div class="container active">
+            <div class="label">What is Your strengths?</div>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Eligendi sint facilis nostrum vel ad perferendis asperiores 
+                        omnis sunt? Totam enim iusto voluptas accusamus soluta? Veritatis, amet.</p>
+                  </div>
+        </div>
+        <div class="container active">
+            <div class="label">What is Your Weakness?</div>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Eligendi sint facilis nostrum vel ad perferendis asperiores 
+                        omnis sunt? Totam enim iusto voluptas accusamus soluta? Veritatis, amet.</p>
+                  </div>
+        </div>
+        <div class="container active">
+            <div class="label">What is Your hobby?</div>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Eligendi sint facilis nostrum vel ad perferendis asperiores 
+                        omnis sunt? Totam enim iusto voluptas accusamus soluta? Veritatis, amet.</p>
+                  </div>
+        </div>
+    </div>
+    <script>
+        const accro = document.getElementsByClassName('container');
+        for(i=0;i<accro.length;i++){
+            accro[i].addEventListener('click',function(){
+                this.classList.toggle('active')
+            })
+        }
+    </script>
+</body>
+</html>
