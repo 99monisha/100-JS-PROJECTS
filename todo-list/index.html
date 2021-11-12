@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>daily to do list</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family:sans-serif;
+            background: rgb(216, 182, 247);
+        
+        }
+        body{
+            width: 50%;
+            margin-top: 10%;
+           margin-left: 36%;
+
+        }
+        h1{
+            font-size: 50px;
+        }
+        .container{
+            width: 360px;
+            margin-top: 30px;
+        }
+        #infield{
+            width: 300px;
+            height: 45px;
+            border: 2px solid rgba(0, 0, 0, 0.493);
+            outline: none;
+            font-size: 25px;
+            vertical-align: middle;
+        }
+        #addtodo{
+            height: 45px;
+            width: 50px;
+            border: 2px solid rgba(0, 0, 0, 0.493);
+            vertical-align: middle;
+            font-size: 30px;
+        }
+        .to-dos{
+            margin-top: 25px;
+        }
+        .paragraph-styling{
+            margin: 0;
+            cursor: pointer;
+            font-size: 27px;
+          
+            color: rgb(28, 28, 53);
+        }
+      
+    </style>
+</head>
+<body>
+    <h1>Daily To-Do list</h1>
+    <div class="container">
+        <input id="infield" type="text"><button id="addtodo">+</button>
+        <div class="to-dos" id="container-todo">
+            <p></p>
+        </div>
+    </div>
+    <script>
+        let addToDoButton = document.getElementById('addtodo');
+        let todoContainer = document.getElementById('container-todo');
+        let inputField = document.getElementById('infield');
+
+
+        addToDoButton.addEventListener('click',function(){
+            var paragraph = document.createElement('p')
+            paragraph.classList.add('paragraph-styling');
+paragraph.innerText = inputField.value;
+
+            todoContainer.appendChild(paragraph);
+            inputField.value = "";
+            paragraph.addEventListener('click', function(){
+                paragraph.style.textDecoration = "line-through";
+            })
+            paragraph.addEventListener('dblclick', function(){
+                todoContainer.removeChild(paragraph);
+            })
+        })
+    </script>
+</body>
+</html>
