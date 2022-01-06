@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css font styling using js</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: serif;
+        }
+        body{
+            height: 100%;
+         margin: 0 auto;
+            background: rgba(182, 128, 231, 0.548);
+           
+        }
+        #container{
+            width: 80%;
+            background: cornsilk;
+            margin: 100px auto;
+            height: 300px;
+            width: 800px;
+        }
+        #paragraph{
+            text-align: center;
+            padding: 0;
+            margin: 0;
+            align-self: center;
+
+        }
+        #containerrr{
+            margin: -50px auto;
+            width: 800px;
+            height: 90px;
+            background: chocolate;
+            display: flex;
+        }
+        #font-one{
+            align-self: center;
+            display: flex;
+            flex-direction: column;
+            margin-left: 25px;
+        }
+        #font-label{
+            padding-bottom: 5px;
+            font-weight: 600;
+        }
+        #select{
+            width: 100px;
+            height: 25px;
+        }
+        #fontsize{
+            align-self: center;
+            margin-left: 50px;
+        }
+        #fontsize p{
+            margin: 0;
+            text-align: center;
+            font-weight: 600;
+        }
+        #fontcolor{
+            align-self: center;
+            margin-left: 50px;
+            display: flex;
+            flex-direction: column;
+        }
+        #fontcolor p{
+            margin: 0;
+            padding: 0;
+            font-weight: 600;
+            padding-bottom: 5px;
+        }
+        #black{
+            background: black;
+        }
+        #red{
+            background: red;
+        }
+        #blue{
+            background: blue;
+        }
+        #green{
+            background: green;
+        }
+        #fontstyle p{
+            margin: 0;
+            padding: 0;
+            font-weight: 600;
+            padding-bottom: 5px;
+            align-self: center;
+        }
+        #fontstyle {
+            align-self: center;
+            margin-left: 50px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #div-style{
+            display: flex;
+            flex-direction: row;
+        }
+        #light{
+            height: 25px;
+            width: 50px;
+            margin-left: 10px;
+        }
+        #bold{
+            height: 25px;
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <p id="paragraph">
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi adipisci fugit neque quasi dicta et incidunt numquam, iste 
+           voluptatum veritatis consequatur cumque esse quam nulla eos officiis nisi facilis error suscipit aperiam ab aspernatur? Tempore, 
+           voluptatem inventore accusamus laboriosam vitae eaque quam illum quasi neque reiciendis tempora quos fugiat saepe iure nemo fuga a
+            illo soluta,
+            laborum delectus. Quidem voluptatum veritatis cumque voluptatem voluptas soluta nisi dolores asperiores ab. Inventore?
+        </p>
+    </div>
+    <div id="containerrr">
+        <div id="font-one">
+            <label for="select" id="font-label">Font Family</label>
+            <select name="" id="select" onchange="myFunction()">
+            <option value="default">default</option>
+             <option value="arial">arial</option>
+             <option value="camberia">camberia</option>
+             <option value="monospace">monospace</option>
+             <option value="georgia">gerogrea</option>
+        </select>
+        </div>
+
+        <div id="fontsize">
+            <p>Font Size<span id="size"></span></p>
+            <input type="range" min="1" max="25" value="12" id="range">
+        </div>
+        <div id="fontcolor">
+            <p>Font Color:</p>
+             <div id="colors">
+                 <button id="black">Black</button>
+                 <button id="red">Red</button>
+                 <button id="blue">Blue</button>
+                 <button id="green">Green</button>
+             </div>
+             <div id="fontstyle">
+                 <p>Font Style</p>
+                 <div id="div-style">
+                     <button id="normal">Normal</button>
+                     <button id="cursive">Cursive</button>
+                     <button id="light">light</button>
+                     <button id="bold">Bold</button>
+                 </div>
+             </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script>
+        var paragraph = document.getElementById('paragraph');
+
+
+        function myFunction(){
+            var font = document.getElementById('select').value;
+          switch(font){
+              case "arial":
+              paragraph.style.fontFamily = "arial";
+              break;
+
+              case "camberia":
+              paragraph.style.fontFamily = "camberia";
+              break;
+
+              case "georgia":
+              paragraph.style.fontFamily = "georgia";
+              break;
+
+              case "monospace":
+              paragraph.style.fontFamily = "monospace";
+              break;
+
+              case "default":
+              paragraph.style.fontFamily = "";
+              break;
+
+                }
+
+        }
+
+
+        var slider = document.getElementById('range');
+        var output = document.getElementById('size');
+        output.innerHTML = slider.value;
+        slider.oninput = function(){
+            output.innerHTML = this.value;
+            var num = this.value;
+            var string = num.toString();
+            paragraph.style.fontSize = num + "px";
+        }
+
+  
+        var black = document.getElementById('black');
+        var Red = document.getElementById('red');
+        var blue = document.getElementById('blue');
+        var green = document.getElementById('green');
+         
+
+        black.addEventListener('click',function(){
+            paragraph.style.color = "black"
+        })
+        Red.addEventListener('click',function(){
+            paragraph.style.color = "red"
+        })
+        blue.addEventListener('click',function(){
+            paragraph.style.color = "blue"
+        })
+        green.addEventListener('click',function(){
+            paragraph.style.color = "green"
+        })
+
+         
+        var normal = document.getElementById('normal');
+        var cursive = document.getElementById('cursive');
+        var light = document.getElementById('light');
+        var bold = document.getElementById('bold');
+
+        normal.addEventListener('click',function(){
+            paragraph.style.fontStyle = "normal";
+        })
+        cursive.addEventListener('click',function(){
+            paragraph.style.fontStyle = "italic";
+        })
+        light.addEventListener('click',function(){
+            paragraph.style.fontWeight= "lighter";
+        })
+        bold.addEventListener('click',function(){
+            paragraph.style.fontWeight = "bold";
+        })
+
+
+
+
+    </script>
+</body>
+</html>
