@@ -1,0 +1,34 @@
+*{
+    font-family: sans-serif;
+    padding: 0;
+
+    margin: 0;
+    box-sizing: border-box;
+}
+.panel{
+    padding: 11em 30em;
+}
+.form{
+    padding: 2em;
+    border-radius: 0.3em;
+    border: 1px solid rgba(0, 0, 0, 0.048);
+}
+.panel>p{
+    font-size: 1.4em;
+}
+#sus{
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 3px 10px;
+    background-color: rgba(137, 43, 226, 0.377);
+     border: 2px solid purple;
+     border-radius: 12px;
+     transition: 0.5s;
+     margin-left: 200px;
+}
+#sus:hover{
+    padding: 5px 12px;
+    font-size: 20px;
+    background-color: rgba(137, 43, 226, 0.479);
+}
