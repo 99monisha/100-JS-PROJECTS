@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+    .container{
+        position: relative;
+        margin-top: 100px;
+        width: 450px;
+        height: auto;
+        background: rgba(0, 0, 0, 0.377);
+        border-radius: 3px;
+    }
+    .label{
+        padding: 20px 130px;
+        font-size: 40px;
+        font-weight: bold;
+        color: #fff;
+    }
+    .login{
+        padding: 20px 40px;
+    }
+    .login .font{
+font-size: 18px;
+color: #fff;
+margin: 5px 0;
+    }
+    .login input{
+        height: 40px;
+        width: 350px;
+        padding: 0 5px;
+        font-size: 17px;
+        outline: none;
+            }
+            .login .font .fon2{
+margin-top: 30px;
+            }
+            .login button{
+                margin: 45px 0 30px 0;
+                height: 45px;
+                width: 365px;
+                font-size: 20px;
+                color: #fff;
+                cursor: pointer;
+                font-weight: bold;
+                background: rgba(255, 68, 0, 0.288);
+                border: 2px solid orangered;
+                border-radius: 3px;
+                transition: 0.3s;
+            }
+            .login button:hover{
+                background: rgba(255, 68, 0, 0.486);
+            }
+            .login #email-error,.login #pass-error{
+                margin-top: 5px;
+                width: 345px;
+                font-size: 18px;
+                color: red;
+                background: rgba(255, 0, 0, 0.185);
+                text-align: center;
+                padding: 5px 8px;
+                border-radius: 3px;
+                border: 2px;
+                display: none;
+
+            }
+</style>
+<body>
+    <div class="container">
+        <h1 class="label">Log In</h1>
+        <form action="" class="login" method="post"name="form" onsubmit="return validated()">
+            <div class="font">Email id</div>
+            <input type="text" name="email" id="">
+            <div id="email_error">Please fill your email </div>
+            <div class="font fon2">Password</div>
+            <input type="pass" name="password" id="">
+            <div id="pass_error">Please fill your password </div>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    <script>
+        var email=document.forms['form']['email'];
+        var password=document.forms['form']['password'];
+        var email_error=document.getElementById('email_error');
+        var pass_error=document.getElementById('pass_error');
+
+
+
+         function validated(){
+             if(email.value.length<9){
+                 email.style.border="1px solid red";
+                 email_error.style.display="block";
+                 email.focus();
+                 return false;
+             }
+             if( password.value.length<6){
+                 password.style.border="1px solid red";
+                 password_error.style.display="block";
+                 password.focus();
+                 return false;
+             }
+         }
+   
+         
+    </script>
+</body>
+</html>
