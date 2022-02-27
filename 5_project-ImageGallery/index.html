@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image gallery</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            background: plum;
+        }
+        .product-img-small img{
+            height: 72px;
+            margin: 10px 0;
+            cursor: pointer;
+            display: block;
+            opacity: 1.8;
+        }
+        .product-img-small img:hover{
+            opacity: 0.5;
+        }
+        .product-img-small{
+            float: left;
+        }
+        .product{
+            top: 40%;
+            left: 30%;
+            transform: translate(-40%,-30%);
+            position: absolute;
+        }
+        .img-container img{
+            height: 390px;
+            width: 400px;
+        }
+        .img-container{
+            display: flex;
+            float: right;
+            padding: 10px;
+        }
+        .text{
+     padding-left: 10px;  
+        font-size: 20px;
+        padding-top: 50px;
+        }
+        .btn{
+            margin-top: 20px;
+            padding: 10px 20px;
+            border-radius: 20px;
+            border: 2px solid purple;
+            background: rgba(128, 0, 128, 0.425);
+            transition: 0.3s;
+        }
+        .btn:hover{
+            background: purple;
+        }
+       h1,p{
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="product">
+<div class="product-img-small">
+
+    <img src="images/1.webp" onclick="myFunction(this)">
+    <img src="images/2.webp" onclick="myFunction(this)">
+    <img src="images/3.webp" onclick="myFunction(this)">
+    <img src="images/a2.jpg" onclick="myFunction(this)">
+    <img src="images/a5.jpg" onclick="myFunction(this)">
+</div>
+<div class="img-container">
+    <img id="fullimage" src="images/3.webp" alt="" srcset="">
+  <div class="text">
+      <h1>OUR PUPPY</h1>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+<p>Lorem ipsum dolor sit amet consectetur</p>
+<p>Lorem ipsum dolor sit amet consectetur</p>
+<p>Lorem ipsum dolor sit.</p>
+<button class="btn">Click Here</button>
+  </div>
+</div>
+    </div>
+    <script>
+        function myFunction(smallImg)
+{
+    var fullImg=document.getElementById('fullimage');
+    fullImg.src=smallImg.src;
+}    </script>
+</body>
+</html>
