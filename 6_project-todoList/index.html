@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: cursive;
+            
+        }
+        .container{
+            padding: 20px;
+            border: 4px solid purple;
+            width: 50%;
+          margin-top: 15%;
+          margin-left: 20%;
+        }
+        .container input{
+            width: 87%;
+            height: 40px;
+        }
+        .container btn{
+            width: 10px;
+            height: 15px;
+        }
+        .container ul{
+            list-style: none;
+        }
+        .container li {
+            color: red;
+        }
+        .container li a{
+            float: right;
+            color: purple;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .container #error{
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul id="box">
+            <input type="text" id="name" class="btn">
+            <input type="button" value="Add" id="btnClick" class="btn" onclick="addMore()">
+          
+            <span id="error"></span>
+        </ul>
+    </div>
+    <script>
+        function addMore(){
+            document.getElementById('error').innerHTML="";
+            let name=document.getElementById('name').value;
+            if(name==''){
+                document.getElementById('error').innerHTML="Please Enter value";
+            }else
+            {
+                let box = document.getElementById('box');
+                let li=document.createElement('li');
+
+                let a = document.createElement('a');
+                a.textContent="x";
+                a.href="javascript:void(0)";
+                li.appendChild(a);
+                li.textContent=name;
+                let pos=box.firstElementChild;
+                if(pos==null){
+                    box.appendChild(li);
+                }
+                box.insertBefore(li,pos);
+            }
+        }
+    </script>
+</body>
+</html>
