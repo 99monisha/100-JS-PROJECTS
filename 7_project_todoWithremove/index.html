@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Todo List</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&family=
+Roboto+Condensed:ital@1&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" 
+integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgba(137, 43, 226, 0.253);
+    color: #fff;
+    font-family: 'Poppins'sans-serif;
+    min-height: 100vh;
+}
+header{
+    font-size: 1.6rem;
+}
+header,form{
+    min-height: 20vh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+form input,form button{
+    padding: 0.2rem;
+    font-size: 2rem;
+    border: none;
+    background: #fff;
+}
+form button{
+    color: crimson;
+    background: #fff;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+form button:hover{
+    background-color:crimson;
+color: #fff;
+}
+.todo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.todo-list{
+    min-height: 30%;
+    list-style: none;
+}
+.todo{
+    margin: 0.5rem;
+    background: #fff;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s;
+}
+.todo li{
+    flex: 1;
+    width: 100%;
+
+}
+.delete-btn, .complete-btn{
+    background: orangered;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.complete-btn{
+    background:rgba(0, 128, 0, 0.507);
+}
+.todo-item{
+    padding: 0rem 0.5rem;
+}
+.fa-trash, .fa-check{
+    pointer-events: none;
+}
+.completed{
+    opacity: 0.4;
+    text-decoration: line-through;
+}
+.fall{
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+.select{
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+select{
+    color: crimson;
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+.select::after{
+    content: "\25BC";
+    position: absolute;
+    background: crimson;
+     padding: 1rem;
+    pointer-events: none;
+}
+.select:hover::after{
+    background: #fff;
+    color: crimson;
+    transition: all 0.3s;
+}
+</style>
+
+</head>
+<body>
+<header>
+    <h1>
+        Monisha's Todo List
+    </h1>
+    <form>
+        <input type="text" class="todo-input">
+        <button class="todo-button" type="submit">
+            <i class="fas fa-plus-square"></i>
+        </button>
+        <div class="select">
+            <select name="todos" class="filter-todo" id="">
+                <option value="all">All</option>
+                <option value="completed">Completed</option>
+                <option value="unompleted">Uncompleted</option>
+            </select>
+        </div>
+    </form>
+    <div class="todo-container">
+        <ul class="todo-list">
+           
+        </ul>
+    </div>
+</header>
+
+
+    <script>
+const todoInput=document.querySelector('.todo-input');
+const todoButton=document.querySelector('.todo-button');
+const todoList=document.querySelector('.todo-list');
+const filterOption=document.querySelector('.filter-todo');
+
+todoButton.addEventListener('click',addTdo);
+todoList.addEventListener('click',deleteCheck);
+
+filterOption.addEventListener('click',filterTodo);
+function addTdo(event)
+{
+  event.preventDefault();
+  const todoDiv=document.createElement('div');
+  todoDiv.classList.add('todo');
+
+  const newTodo=document.createElement('li');
+  newTodo.innerHTML=todoInput.value; 
+  newTodo.classList.add('todo-item');
+  todoDiv.appendChild(newTodo);
+
+  const completedButton=document.createElement('button');
+  completedButton.innerHTML='<i class="fas fa-check"></i>';
+  completedButton.classList.add("complete-btn");
+  todoDiv.appendChild(completedButton);
+
+  
+  const delButton=document.createElement('button');
+  delButton.innerHTML='<i class="fas fa-trash"></i>';
+  delButton.classList.add("delete-btn");
+  todoDiv.appendChild(delButton);
+
+todoList.appendChild(todoDiv);
+
+
+todoInput.value="";
+
+}
+
+function deleteCheck(e){
+    const item=e.target;
+
+
+    if(item.classList[0]==='delete-btn'){
+       const todo=item.parentElement;
+       todo.classList.add("fall");
+       todo.addEventListener('transitionend',function(){
+           todo.remove();
+       })
+    
+    }
+
+if(item.classList[0]==="complete-btn"){
+    const todo=item.parentElement;
+    todo.classList.toggle("completed");
+}
+}
+function filterTodo(e){
+    const todos=todoList.childNodes;
+    todos.forEach(function(todo){
+        switch(e.target.value){
+            case "all":
+            todo.style.display='flex';
+            break;
+            case "completed":
+            if(todo.classList.contains('completed')){
+                todo.style.display='flex';
+
+            }else{
+                todo.style.display='none'; 
+            }
+break;
+case "uncompleted":
+if(!todo.classList.contains('completed')){
+    todo.style.display='flex'; 
+}else{
+    todo.style.display='none'; 
+}break;
+        }
+    });
+
+}
+
+    </script>
+</body>
+</html>
