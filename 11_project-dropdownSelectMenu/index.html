@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DropDownSelector</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==
+    " crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+.hero{
+    width: 100%;
+    height: 100vh;
+    background: purple;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.selector{
+    width: 350px;
+}
+#selectField{
+    width: 100%;
+    padding: 15px 20px;
+    margin-bottom: 30px;
+background: rgba(255, 255, 255, 0.589);
+border-radius: 5px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+cursor: pointer;
+}
+li,p{
+    font-size: 20px;
+    font-weight: 600;
+}
+#selectField i{
+    width: 22px;
+    transition: all 0.3s;
+}
+#list{
+    width: 100%;
+    background:rgba(255, 255, 255, 0.589);
+;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.options{
+    width: 100%;
+    padding: 15px 0 15px 70px;
+    list-style: none;
+    cursor: pointer;
+}
+.options:hover{
+    background: rgba(250, 8, 250, 0.466);
+}
+.remove{
+    visibility: hidden;
+}
+.rotate{
+    transform: rotate(180deg);
+}
+</style>
+</head>
+
+<body>
+    <div class="hero">
+<div class="selector">
+    <div id="selectField">
+        <p id="selectText">Select your Menu</p>
+        <i class="fas fa-angle-down" id="icon"></i>
+    </div>
+    <ul id="list" class="remove">
+        <li class=options>Google</li>
+        <li class=options>Instagram</li>
+        <li class=options>Linkedin</li>
+        <li class=options>FaceBook</li>
+        <li class=options>Whatsapp</li>
+        <li class=options>Youtube</li>
+        <li class=options>Twiter</li>
+    </ul>
+</div>
+
+    </div>
+
+
+
+    <script>
+    var selectField = document.getElementById("selectField");
+    var selectText = document.getElementById("selectText");
+    var options = document.getElementsByClassName("options");
+    var icon = document.getElementById("icon");
+    var list = document.getElementById("list");
+    selectField.onclick=function(){
+      list.classList.toggle("remove");
+      icon.classList.toggle("rotate");
+    }
+
+
+    for(options of options){
+        options.onclick=function(){
+            selectText.innerHTML=this.textContent; 
+            list.classList.toggle("remove");
+            icon.classList.toggle("rotate");
+        }
+    }
+    
+
+    </script>
+</body>
+</html>
