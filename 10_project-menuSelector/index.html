@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>select any country using menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+     integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==
+    " crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="wrapper">
+        <div class="select-btn">
+          <span>Select Foods</span>
+          <i class="fas fa-angle-down"></i>
+        </div>
+        <div class="content">
+          <div class="search">
+            <i class="fas fa-search"></i>
+            <input spellcheck="false" type="text" placeholder="Search">
+          </div>
+          <ul class="options"></ul>
+        </div>
+      </div>
+    <script>
+     
+
+
+     const wrapper = document.querySelector(".wrapper"),
+selectBtn = wrapper.querySelector(".select-btn"),
+searchInp = wrapper.querySelector("input"),
+options = wrapper.querySelector(".options");
+
+let countries = ["asparagus", "apples", "avacado", "alfalfa", "acorn squash", "almond", "arugala",
+                 "artichoke", "albacore tuna", "Apple juice", "Bruscetta", "baked beans", "bison", "Cabbage", "chocolates",
+                 "corn", "cookies", "dalia", "dhosa", "dairy", "egg", "eggrolls", "fish",
+                 "foods", "fruiti", "ghee", "garlic", "ginger", "hum", "honey", "ice",
+                 "ice cream", "jelly", "jam", "kale", "kiwi", "lamb", "litchu", "mango",
+                 "muri", "misti", "naddu", "noodles", "ostrich", "oll", "pantua","pustu","pantavat","palong-shak"];
+
+function addCountry(selectedCountry) {
+    options.innerHTML = "";
+    countries.forEach(country => {
+        let isSelected = country == selectedCountry ? "selected" : "";
+        let li = `<li onclick="updateName(this)" class="${isSelected}">${country}</li>`;
+        options.insertAdjacentHTML("beforeend", li);
+    });
+}
+addCountry();
+
+function updateName(selectedLi) {
+    searchInp.value = "";
+    addCountry(selectedLi.innerText);
+    wrapper.classList.remove("active");
+    selectBtn.firstElementChild.innerText = selectedLi.innerText;
+}
+
+searchInp.addEventListener("keyup", () => {
+    let arr = [];
+    let searchWord = searchInp.value.toLowerCase();
+    arr = countries.filter(data => {
+        return data.toLowerCase().startsWith(searchWord);
+    }).map(data => {
+        let isSelected = data == selectBtn.firstElementChild.innerText ? "selected" : "";
+        return `<li onclick="updateName(this)" class="${isSelected}">${data}</li>`;
+    }).join("");
+    options.innerHTML = arr ? arr : `<p style="margin-top: 10px;">Oops! Country not found</p>`;
+});
+
+selectBtn.addEventListener("click", () => wrapper.classList.toggle("active"));
+
+    </script>
+</body>
+</html>
