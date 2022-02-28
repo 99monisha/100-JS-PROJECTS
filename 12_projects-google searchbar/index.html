@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google-searchbar</title>
+    
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'poppins',sans-serif;
+            background: purple;
+        }
+        .search{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10%;
+            width: 100%;
+        }
+        form input{
+            width: 450px;
+            padding: 1% 8%;
+            background: #fff;
+            border: 2px solid purple;
+            border-radius: 70px;outline: none;
+            
+        }
+        ::placeholder{
+            display: flex;
+            align-items: center;
+            justify-content: center; 
+        }
+    </style>
+</head>
+<body>
+    <form action="https://www.google.com/search" method="get" class="search" >
+        <input type="text" placeholder="search  here as your mind">
+        <i class="fas fa-search"></i>
+    </form>
+</body>
+</html>
