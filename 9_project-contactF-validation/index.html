@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form Validation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==
+    " crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background: rgb(90, 1, 90);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container form{
+    position: relative;
+    width: 90%;
+    max-width: 500px;
+    padding: 50px 30px 20px;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 4px 4px palevioletred;
+}
+.fa-paper-plane{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #fff;
+    font-size: 26px;
+    padding: 20px;
+    border-radius: 50%;
+    box-shadow: 0 0px 14px palevioletred;
+}
+.input-group{
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+
+}
+.input-group label{
+    flex-basis: 28%;
+}
+.input-group input, .input-group textarea{
+    flex-basis: 68%;
+    background: transparent;
+    border: 0;
+    outline: none;
+    padding: 10px 0;
+    border-radius: 1px solid #999;
+    color: #333;
+    font-size: 17px;
+}
+::placeholder{
+    font-size: 14px;
+    color: rgb(199, 198, 198);
+}
+form button{
+    background: rgba(185, 4, 185, 0.616);
+    color: #fff;
+    border-radius: 4px;
+    border: 1px solid purple;
+    padding: 10px 40px;
+    outline: none;
+    cursor: pointer;
+    display: block;
+    margin: 30px auto 10px
+}
+
+
+
+
+    </style>
+</head>
+<body>
+     <div class="container">
+         <form>
+             <i class="fas fa-paper-plane"></i>
+             <div class="input-group">
+                 <label>full Name</label>
+                 <input type="text" placeholder="enter your name">
+             </div>
+            
+             <div class="input-group">
+                <label>Phone No.</label>
+                <input type="text" placeholder="123 456 7890">
+            </div>
+
+            <div class="input-group">
+                <label>Email Id</label>
+                <input type="email" placeholder="enter your email name">
+            </div>
+
+            <div class="input-group">
+                <label>Your Message</label>
+             <textarea rows="5" placeholder="Enter Your Message"></textarea>
+            </div>
+
+            <button>Submit</button>
+         </form>
+     </div>
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+    </script>
+</body>
+</html>
