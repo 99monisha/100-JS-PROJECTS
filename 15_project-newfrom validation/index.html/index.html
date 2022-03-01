@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>from validation</title>
+    <style>
+        body{
+            background: purple;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20%;
+        }
+        input{
+            padding: 10px;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        label{
+            font-size: 20px;
+        }
+    
+    </style>
+</head>
+<body>
+    <div id="error"></div>
+    <form action="/" method="get" id="form">
+        <div>
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text">
+        </div>
+
+        <div>
+            <label for="password">Password</label>
+            <input id="password" name="password" type="text">
+        </div>
+
+      <button type="submit">submit</button>
+    </form>
+
+    <script>
+         const error = document.getElementById("error");
+        const name = document.getElementById("name");
+        const password = document.getElementById("password");
+        const form = document.getElementById("form");
+        form.addEventListener('submit',(e)=>{
+            let msg=[]
+            if(name.value==='' || name.value==null){
+                msg.push('Enter Your Name')
+            }
+            if(password.value.length<=5){
+                msg.push('Enter Your Password at least 5 character')
+            }
+            if(password.value.length>=18){
+                msg.push('password is too long')
+            }
+            if(password.value===`password`){
+                msg.push('same name can not be password')
+            }
+
+
+
+
+            if(msg.length>0){
+            e.preventDefault()
+            error.innerText=msg.join(',')
+            }
+
+        })
+
+
+
+
+    </script>
+</body>
+</html>
