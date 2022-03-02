@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Testimonials Section</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'poppins',sans-serif;
+        }
+        .hero{
+            width: 100%;
+            height: 100vh;
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        h1{
+            margin-bottom: 80px;
+            font-size: 30px;
+            position: relative;
+        }
+        h1::after{
+            content: '';
+            width: 150px;
+            height: 2px;
+            background: purple;
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .box{
+            position: relative;
+            width: 90%;
+            max-width: 700px;
+            border-radius: 11px;
+            height: 300px;
+            box-shadow: -10px 10px 40px #333;
+            overflow: hidden;
+        }
+        .card{
+            position: relative;
+            height: 300px;
+            padding: 40px;
+            color: #777;
+            line-height: 22px;
+            background: #fff;
+            z-index: 1;
+        }
+        .card::before{
+            position: absolute;
+            content: '';
+            width: 110px;
+            height: 110px;
+            border-bottom-right-radius: 100%;
+            background: purple;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        .profile{
+            align-items: center;
+            display: flex;
+            margin-bottom: 40px;
+        }
+        .profile img{
+            width: 70px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        .profile h3{
+            font-size: 29px;
+            color: purple;
+            margin-bottom: 10px;
+        }
+        #slide{
+            position: absolute;
+            width: 100%;
+            padding-right: 60px;
+            top: 0;
+            left: 0;
+            transition: 0.5s;
+
+        }
+        .sidebar{
+            position: absolute;
+            width: 50px;
+            height: 100%;
+            padding: 15px 0;
+            background: purple;
+            right: 0;
+            top: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .arrow{
+width: 30px;
+padding: 10px;
+background: #fff;
+border-radius: 100%;
+cursor: pointer;
+font-size: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>TESTIMONIALS SECTION</h1>
+        <div class="box">
+            <div id="slide">
+                <div class="card">
+                    <div class="profile">
+                        <img src="images/1.webp">
+                        <div>
+                            <h3>Monisha Dolai</h3>
+                    <p>Web Designer</p>
+                        </div>
+                    
+                    </div>
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nihil quasi atque vero quod dicta, repudiandae fugit,
+                     temporibus, nisi libero commodi vitae molestias sint 
+                     dolore incidunt laborum soluta! Reiciendis, aut commodi?</p>
+                </div>
+
+                <div class="card">
+                    <div class="profile">
+                        <img src="images/1.webp">
+                        <div>
+                            <h3>Riya Roy</h3>
+                    <p>Web Designer</p>
+                        </div>
+                    
+                    </div>
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nihil quasi atque vero quod dicta, repudiandae fugit,
+                     temporibus, nisi libero commodi vitae molestias sint 
+                     dolore incidunt laborum soluta! Reiciendis, aut commodi?</p>
+                </div>
+
+                <div class="card">
+                    <div class="profile">
+                        <img src="images/a2.jpg">
+                        <div>
+                            <h3>Suman Samanta</h3>
+                    <p>System Engineer</p>
+                        </div>
+                    
+                    </div>
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nihil quasi atque vero quod dicta, repudiandae fugit,
+                     temporibus, nisi libero commodi vitae molestias sint 
+                     dolore incidunt laborum soluta! Reiciendis, aut commodi?</p>
+                </div>
+
+                 <div class="card">
+                    <div class="profile">
+                        <img src="images/2.webp">
+                        <div>
+                            <h3>Papa Babu</h3>
+                    <p>Photographer</p>
+                        </div>
+                    
+                    </div>
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nihil quasi atque vero quod dicta, repudiandae fugit,
+                     temporibus, nisi libero commodi vitae molestias sint 
+                     dolore incidunt laborum soluta! Reiciendis, aut commodi?</p>
+                </div>
+            </div>
+<div class="sidebar">
+    <h2 class="arrow" id="upArrow">UP</h2>
+    <h2 class="arrow" id="downArrow">DW</h2>
+</div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script>
+        var slide = document.getElementById("slide");
+        var upArrow = document.getElementById("upArrow");
+        var downArrow = document.getElementById("downArrow");
+        let x=0;
+        upArrow.onclick=function(){
+            if(x>-900){
+                x=x-300;
+              slide.style.top= x + "px";
+
+            }
+           
+        }
+        downArrow.onclick=function(){
+            if(x<0){
+                x=x+300;
+              slide.style.top= x + "px";
+
+            }
+           
+        }
+    </script>
+</body>
+</html>
