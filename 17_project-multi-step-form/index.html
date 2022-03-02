@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>multi-step-form</title>
+    <style>
+      *{
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+          font-family: 'poppins',sans-serif;
+      }
+      body{
+          background: purple;
+
+      }
+      .container{
+          width: 360px;
+          height: 400px;
+          margin: 8% auto;
+          background: #fff;
+          border-radius: 5px;
+          position: relative;
+          overflow: hidden;
+      }
+      h3{
+          text-align: center;
+          margin-bottom: 40px;
+          color: #777;
+      }
+      .container form{
+          width: 280px;
+          position: absolute;
+          top: 100px;
+          left: 40px;
+          transition: all 0.5s;
+      }
+      form input{
+          width: 100%;
+          padding: 10px 5px;
+          margin: 5px 0;
+          border: 0;
+          border-bottom: 1px solid#999;
+          background: transparent;
+          outline: none;
+      }
+      ::placeholder{
+          color: #777;
+      }
+      .btnbox{
+          text-align: center;
+          width: 100%;
+          margin: 30px auto;
+      }
+      form button{
+          width: 110px;
+          height: 35px;
+          background: rgba(179, 3, 179, 0.534);
+          margin: 0 10px;
+          border-radius: 30px;
+          cursor: pointer;
+          outline: none;
+          border: 2px solid purple;
+      }
+      #form2{
+          left: 450px;
+      }
+      #form3{
+          left: 450px;
+      }
+      .steps{
+          position: relative;
+          width: 360px;
+          height: 40px;
+          margin: 0 auto;
+          display: flex;
+          align-items: center;
+          box-shadow: 0 -1px 5px -1px #333;
+      }
+      .steps-col{
+          width: 120px;
+          text-align: center;
+          position: relative;
+          color: #3333;
+      }
+      #progress{
+          position: absolute;
+          height: 100%;
+          width: 120px;
+          background: rgba(216, 112, 147, 0.466);
+          transition: 1s;
+      }
+      #progress::after{
+          content: '';
+          height: 0;
+          width: 0;
+          border-top: 20px solid transparent;
+          border-bottom:20px solid transparent;
+          right: -20px;
+          top: 0;
+          border-left: 20px solid rgba(216, 112, 147, 0.466);
+          position: absolute;
+      }
+    </style>
+</head>
+<body>
+       
+<div class="container">
+
+    <!--first form-->
+    <form action="" id="form1">
+        <h3>CREATE ACCOUNT</h3>
+        <input type="text" placeholder="Email" required>
+        <input type="password" placeholder="password" required>
+        <input type="conpassword" placeholder="conpassword" required>
+      <div class="btnbox">
+        <button type="button" id="Next1">Next</button>
+       </div>
+    </form>
+
+ <!--second form-->
+ <form action="" id="form2">
+    <h3>SOCIALS LINKS</h3>
+    <input type="text" placeholder="Github" required>
+    <input type="text" placeholder="Linkedin" required>
+    <input type="text" placeholder="Twiter" required>
+   
+  <div class="btnbox">
+    <button type="button"id="Back1">Back</button>
+    <button type="button" id="Next2">Next</button>
+   </div>
+</form>
+
+<!--Third form-->
+<form action=""id="form3">
+    <h3>PERSONAL DETAILS</h3>
+    <input type="text" placeholder="First Name" required>
+    <input type="text" placeholder="Last Name" required>
+    <input type="text" placeholder="Mobile Number" required>
+   
+  <div class="btnbox">
+    <button type="button" id="Back2">Back</button>
+    <button type="submit">submit</button>
+   </div>
+</form>
+
+<div class="steps">
+    <div id="progress"></div>
+<div class="steps-col"><small>Step-1</small></div>
+<div class="steps-col"><small>Step-2</small></div>
+<div class="steps-col"><small>Step-3</small></div>
+</div>
+
+</div>
+
+
+
+    <script>
+var form1=document.getElementById("form1");
+var form2=document.getElementById("form2");
+var form3=document.getElementById("form3");
+var Next1=document.getElementById("Next1");
+var Next2= document.getElementById("Next2");
+var Back1= document.getElementById("Back1");
+var Back2= document.getElementById("Back2");
+var progress= document.getElementById("progress");
+
+
+Next1.onclick=function(){
+    form1.style.left="-450px";
+    form2.style.left="40px";
+    progress.style.width="240px"
+}
+
+Back1.onclick=function(){
+    form1.style.left="40px";
+    form2.style.left="-450px";
+    progress.style.width="120px"
+}
+  
+Next2.onclick=function(){
+    form2.style.left="-450px";
+    form3.style.left="40px";
+    progress.style.width="360px"
+}
+Back2.onclick=function(){
+    form2.style.left="40px";
+    form3.style.left="450px";
+    progress.style.width="240px"
+}
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+.card{
+    background: #fff;
+    border: 1px solid #333;
+    border-radius: .5rem;
+    padding: .5rem;
+    max-width: 300px;
+   margin: 0 auto;
+
+    animation: fade  500ms ease-in-out forwards;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+    gap: .25em;
+    margin-bottom: .5rem;
+    
+
+}
+.form-group > label{
+    font-weight: bold;
+    font-size: .8em;
+    color: #333;
+
+}
+.form-group >input{
+    border-radius: .25rem;
+    border: 1px solid#3333;
+    font-size: 1rem;
+    padding: .25em;
+}
+.form-group :last-child{
+    margin: 0;
+}
+.text-title{
+margin: 0;
+margin-bottom: 1rem;
+text-align: center;
+font-size: 2rem;
+}
+.card.active{
+  
+    
+    animation: slide 500ms 200ms ease-in-out both;
+}
+.multistep{
+    overflow: hidden;
+   position: relative;
+}
+.hide{
+    display:none;
+}
+@keyframes slide{
+    0%{
+        transform: translateX(200%);opacity: 0;
+    }
+    100%{
+        transform: translateX(0);opacity: 1;
+    }
+}
+
+@keyframes fade{
+    0%{
+        transform: scale(1);opacity: 1;
+    }
+    50%{
+        transform:scale(.75);opacity: 0;
+    }
+    100%{
+        transform:scale(0);opacity: 0;
+    }
+}

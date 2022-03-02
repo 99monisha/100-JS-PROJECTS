@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form data-multi-step class="multistep">
+        <div class="card " data-step>
+            <h3 class="text-title">OUR FIRST LOG_IN PAGE</h3>
+            <div class="form-group">
+                      <label for="email">Email</label>
+                      <input type="email" id="email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password">
+      </div>
+      <button type="button" data-next>Next</button>
+        </div>
+
+
+        <div class="card " data-step>
+            <h3 class="text-title">OUR SECOND ADRESS PAGE</h3>
+            <div class="form-group">
+                      <label for="adress">Adress</label>
+                      <input type="text" id="adress" name="adress" required>
+            </div>
+            <div class="form-group">
+                <label for="city">City</label>
+                <input type="text" id="city" name="city" required>
+            </div>
+            <div class="form-group">
+                <label for="pincode">Pincode</label>
+                <input type="text" id="pincode" name="pincode" required>
+            </div>
+      <button type="button" data-previous>Previous</button>
+      <button type="button" data-next>Next</button>
+        </div>
+
+
+        <div class="card" data-step>
+            <h3 class="text-title">OUR LAST FORM ADRESS PAGE</h3>
+            <div class="form-group">
+                      <label for="firstName">FIRST NAME</label>
+                      <input type="text" id="firstName" name="firstName" required>
+            </div>
+            <div class="form-group">
+                <label for="lastName">LAST NAME</label>
+                <input type="text" id="lastName" name="lastName" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">PHONE</label>
+                <input type="text" id="phone" name="phone" required>
+            </div>
+           
+      <button type="button"data-previous>Previous</button>
+      <button type="button"data-next>Next</button>
+
+
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
