@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>auto Resize Text-Area</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'poppins',sans-serif;
+        }
+        body{
+            text-align: center;
+            max-width: 650px;
+            margin: 4% auto;
+            background-color: #333;
+            color: #fff;
+            border: 3px solid#000;
+        }
+        .text{
+            font-size: 24px;
+        }
+        .readMore{
+            display: none;
+        }
+        .readMore-btn{
+            padding: 10px 30px;
+            background-color: aliceblue;
+            color: #000;
+         
+            outline: none;
+            font-size: 22px;
+            cursor: pointer;
+            border-radius: 10px;
+          
+        }
+        .text.showMore .readMore{
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <h1>ReadMore/ReadLess</h1><br>
+    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, 
+        id modi omnis nihil adipisci neque quo? Nulla,
+         voluptas soluta? Quas voluptas autem sapiente, ratione at iusto consequuntur voluptates enim 
+         quam maxime et magni doloremque nam rerum, 
+        in minima veritatis aspernatur excepturi dolorum itaque vero non maiores.
+         Explicabo quisquam voluptate aliquam?
+        <span class="readMore">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos, eveniet. 
+            Illum ipsum rerum nihil molestiae velit eius ducimus dolores assumenda, delectus quas, 
+            ex harum commodi quis, rem quibusdam iste tempora molestias vel praesentium minus voluptatum 
+            enim repudiandae saepe. Odit eligendi harum necessitatibus et adipisci facere vero? 
+            Expedita dolores sit illo deserunt sint officia hic ipsam! Dolore inventore blanditiis totam esse?</span></p><br>
+            <button class="readMore-btn">Read More</button><br>
+   <script>
+       const readMore=document.querySelector('.readMore-btn');
+       const text=document.querySelector('.text');
+       readMore.addEventListener('click',(e)=>{
+           text.classList.toggle('showMore');
+           if(readMore.innerText==='Read More'){
+            readMore.innerText = 'Read Less';
+           }else{
+            readMore.innerText = 'Read More';
+           }
+
+       })
+
+
+
+   </script> 
+</body>
+</html>
