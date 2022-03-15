@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>key code genator</title>
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    font-size: 20px;
+    background-color: #999;
+}
+section{
+    min-height: 100vh;
+    width: 100%;
+    padding: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.container{
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.arrow{
+   font-size: 70px;
+   width: 80px;
+   background-color: transparent!important;
+   padding: 0 100px !important;
+   cursor: default!important;
+}
+.container div{
+    background-color: #777;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.container div:hover{
+    background-color: #888;
+}
+.container h2{
+    margin: 20px 0;
+    font-size: 60px;
+}
+.others{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+@media only screen and(max-width:1000px){
+    .container{
+   
+  flex-direction: column;
+    }
+    
+}
+    </style>
+</head>
+<body>
+    <section>
+        <div class="container">
+            <div class="key">
+                <h1>Preesed Key</h1>
+                <h2>A</h2>
+            </div>
+            <div class="arrow">>></div>
+            <div class="keyCode">
+                <h1>Key Code</h1>
+                <h2>67</h2>
+                <p>click to copy</p>
+            </div>
+        </div>
+    </section>
+   
+    
+    <script>
+        const dKey=document.querySelector('.key h2');
+        const dkeyCode=document.querySelector('.keyCode h2');
+        const dKeyDiv=document.querySelector('.keyCode');
+   const otHer=document.querySelector('.others');
+        window.addEventListener('keydown',(e)=>{
+           
+            dKey.innerText=e.key;
+            dkeyCode.innerText=e.keyCode;
+            if(e.keyCode===32){
+                dKey.innerText=`'space'`;
+
+            }
+
+        })
+dKeyDiv.addEventListener('click',(e)=>{
+    const textArea=document.createElement('textArea');
+    textArea.setAttribute('readonly','');
+    textArea.style.position='absolute';
+    textArea.value=dKeyDiv.querySelector('h2').innerText;
+    document.body.appendChild(textArea)
+    textArea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textArea);
+    dKeyDiv.querySelector('p').innerText='copied';
+    setTimeout(()=>{
+        dKeyDiv.querySelector('p').innerText='click to copy';  
+    },2000)
+})
+
+    </script>
+</body>
+</html>
