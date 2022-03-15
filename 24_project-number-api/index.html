@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'poppins',sans-serif;
+        }
+        html{
+            font-size: 10px;
+        }
+        body{
+            background: #333;
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+        }
+        section{
+            width: 100%;
+    
+        }
+        .container{
+            width: 90%;
+            margin: 0 auto;
+            max-width: 450px;
+    
+        }
+        form, .number{
+            width: 100%;
+            background-color: #777;
+            padding: 20px;
+            border-radius: 9px;
+
+        }
+        input[type="number"]{
+width: 70%;
+height: 40px;
+border-radius: 4px;
+outline: none;
+border: none;
+background-color: #333;
+font-size: 30px;
+color: #fff;
+        }
+        input[type="number"]:placeholder{
+            font-size: 24px;
+
+}
+button{
+    display: inline-block;
+    width: 20%;
+    font-size: 24px;
+    height: 40px;
+    background-color: #333;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.number{
+margin-top: 15px;
+height: auto;
+font-size: 20px;
+color: black;
+}
+    </style>
+</head>
+<body>
+    <section>
+        <div class="container">
+            <form>
+                <input type="number" placeholder="Enter a number">
+                <button type="submit">Submit</button>
+            </form>
+            <div class="number">Just wait few seconds......</div>
+        </div>
+    </section>
+    <script>
+     const form = document.querySelector('form');
+     const numberDiv=document.querySelector('.number');
+       form.addEventListener('submit',(e)=>{
+           e.preventDefault();
+           const num=e.target.querySelector('input[type="number"]').value;
+          const loadText='wait plss.....';
+          numberDiv.innerHTML=loadText;
+          const baseUrl='http://numbersapi.com/';
+          fetch(baseUrl+num)
+          .then(Response=>Response.text())
+          .then(text=>numberDiv.innerHTML=text);
+
+       })
+    </script>
+</body>
+</html>
