@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tempareture Converter</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        html{
+            font-size: 62.5%;
+        }
+        .container{
+            width: 30%;
+            text-align: center;
+            justify-content: center;
+            margin: 25rem auto;
+            padding: 2rem;
+            background-color: blueviolet;
+            height: 20vh;
+           padding-top: 2rem;
+        }
+        .box-con{
+         align-items: center;
+         justify-content: center;
+          }
+          input{
+              padding: 1rem;
+           
+          }
+          :placeholder-shown{
+              font-size: 1.3rem;
+          }
+          h1{
+              padding: 1rem;
+           font-size: 3rem;
+          }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Tempareture Converter</h1>
+        <div class="box-con">
+            <input type="number" id="cel" placeholder="Enter Celcius"  class="temp">
+            <input type="number" id="far" placeholder="Enter Farenhight"  class="temp">
+        </div>
+        
+    </div>
+    <script>
+        const celci=document.getElementById("cel");
+        const farhen=document.getElementById("far");
+
+        celci.addEventListener('input', function(){
+            let c=this.value;
+            let f=(c*9/5)+32;
+            farhen.value=f;
+
+        });
+        farhen.addEventListener('input',function(){
+let f=this.value;
+let c=(f-32)*9/5;
+celci.value=c;
+        });
+
+    </script>
+</body>
+</html>
