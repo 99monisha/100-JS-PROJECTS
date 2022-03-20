@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Switcher</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 100%;
+            height: 100vh;
+            margin: 0 auto;
+           
+        }
+        .hero{
+          width: 90%;
+            align-items: center;
+            justify-content: center;width: 80%;
+            margin: auto;
+            padding: 2%;
+        }
+        h1{
+           padding-bottom: 5%;
+            margin-left: 28%;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+        img{
+            width: 100%;
+        }p{
+           text-align: justify;
+           padding-top: 5%;
+           font-size: 30px;
+        }
+        .changer{
+           text-align: center;
+           padding-top: 2%;
+           cursor: pointer;
+        }
+        .color {
+            width: 30px;
+            height: 30px;
+            border: 2px solid #999;
+            display: inline-block;
+            border-radius: 50%;
+           
+
+        }
+        #red{
+            background-color: blueviolet;
+        }
+        #green{
+            background-color:green;
+        }
+        #yellow{
+            background-color: yellow;
+        }
+        #black{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="changer">
+           <span class="color" id="white" onclick="colorchanger('#ffffff')"></span>
+           <span class="color" id="red" onclick="colorchanger('#006470')"></span>
+           <span class="color" id="green" onclick="colorchanger('#006400')"></span>
+           <span class="color" id="yellow" onclick="colorchanger('#FFFF00')"></span>
+           <span class="color" id="black" onclick="colorchanger('#000000')"></span>
+        </div>
+        <div class="hero">
+        <h1 class="text">Background Switcher</h1>
+        <img src="images/1.webp" alt="bootstrap-background" srcset="">
+        <p class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, expedita et
+             inventore doloremque eos impedit fugiat perferendis facilis. Aperiam vel itaque obcaecati 
+             sint aliquam sit, libero saepe tenetur corrupti id voluptatum enim nobis eaque molestias,
+              magnam nesciunt perferendis error exercitationem incidunt facere! Aut minus, asperiores 
+              alias quod animi eveniet saepe rerum quia repudiandae earum laudantium odit voluptatem
+               deserunt sed! Non pariatur hic, mollitia reiciendis harum deleniti explicabo quae obcaecati
+                animi fuga sed ducimus! Repellendus natus, tempore magni adipisci totam ipsum! Inventore 
+                 sint corporis doloribus possimus cumque at assumenda earum qui autem nostrum aspernatur, 
+                 reprehenderit adipisci odio quasi magnam dolores non et quae? Ipsa dolore necessitatibus,
+                  assumenda impedit quia deleniti error vero earum iure suscipit minima labore explicabo.
+                   Amet ab, magni, dolor corporis ipsa fuga ad natus nemo, dignissimos adipisci aspernatur
+                    porro quis dicta esse hic. Beatae, soluta at odio voluptatem, labore iusto qui consectetur 
+                    quos reiciendis eveniet eaque perspiciatis voluptate similique recusandae accusamus fugit 
+                    minus sapiente impedit in harum 
+                    necessitatibus autem blanditiis minima? Sed necessitatibus excepturi placeat quos libero 
+               nesciunt accusamus voluptate explicabo numquam ea id assumenda porro nisi, sit rem laboriosam eum.
+              Optio reprehenderit esse nam deleniti beatae mollitia corporis consectetur quasi minus natus, enim ipsa a.</p>
+    </div>
+</div>
+    <script>
+        function colorchanger(color){
+        document.body.style.background=color;
+        let textt=document.getElementsByClassName("text");
+        if(color=="#000000"){
+            for(let eleme of textt){
+             eleme.style.color="white";
+            }
+          
+        }
+        else if(color=="#006400"){
+            for(let eleme of textt){
+             eleme.style.color="white";
+            }
+
+        }
+        else if(color=="#006470"){
+            for(let eleme of textt){
+             eleme.style.color="white";
+            }
+
+        }
+        else{
+            for(let eleme of textt){
+             eleme.style.color="black";
+            }
+
+        }
+
+        
+        }
+    </script>
+</body>
+</html>
