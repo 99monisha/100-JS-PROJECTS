@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    display: grid;
+    height: 100%;
+    place-items: center;
+    background: #f2f2f2;
+}
+.container{
+    width: 420px;
+    background: #ffff;
+    padding: 20px 30px;
+    border-radius: 9px;
+
+}
+.container header{
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px;
+
+}
+.container form{
+    margin: 20px 5px 10px 5px;
+
+}
+form .field{
+    
+    height: 45px;
+    width: 100%;
+    display: flex;
+
+}
+form .field input{
+    height: 100%;
+    width: 100%;
+    border: 2px solid lightgray;
+    padding-left: 15px;
+    border-radius: 5px;
+    font-size: 17px;
+    transition: all 0.3s;
+    outline: none;
+}
+form .field input:focus{
+    border-color: #27a360;
+
+}
+form .field .showBtn{
+    position: relative;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    display: none;
+
+}
+form .indicator{
+    height: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+    display: none;
+    position: absolute;
+
+}
+form .indicator span{
+    width: 100%;
+    height: 100%;
+    background: lightgray;
+
+    border-radius: 5px;
+}
+form .indicator span.medium{
+    margin: 0 3px;
+
+}
+form .indicator span:before{
+    content: "";
+   position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+   height: 100%;
+    border-radius: 5px;
+}
+form .indicator span .active .weak::before{
+    background-color: #ff4757;
+   
+}
+form .indicator span .active .medium::before{
+    background-color: orange;
+}
+form .indicator span .active .strong::before{
+    background-color: #23ad5c;
+}
+form .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: -10px;
+    display: none;
+
+}
+form .text .weak{
+    color:#ff4757 ;
+}
+form .text .medium{
+    color:orange;
+}
+form .text .strong{
+    color: #23ad5c;
+}
