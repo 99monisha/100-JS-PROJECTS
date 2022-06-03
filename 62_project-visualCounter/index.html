@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    margin: 0;
+    min-height: 100vh;
+    font-family:sans-serif;
+    background: blueviolet;
+
+}
+.counter{
+    font-size: 70px;
+}
+span{
+    font-size: 28px;
+    font-family: sans-serif;
+    color: black;
+}
+    </style>
+</head>
+<body>
+    <div class="counter" data-target="12000">
+
+    </div>
+    <span>Twitter Followers</span>
+    <div class="counter" data-target="32000">
+
+    </div>
+    <span>Facebook Followers</span>
+    <div class="counter" data-target="62000">
+
+    </div>
+    <span>Instagram Followers</span>
+    <script>
+const counters = document.querySelectorAll(".counter");
+counters.forEach(counter =>{
+    counter.innerText='0';
+    const updateCounter=()=>{
+        const target = +counter.getAttribute('data-target');
+   const c = +counter.innerText;
+   const increment=Math.random()*100;
+   if(c < target){
+       counter.innerText= Math.ceil(c+ increment);
+       setTimeout(updateCounter, 1);
+
+   }
+   else{
+       counter.innerText=target;
+   }
+
+    };
+    updateCounter();
+});
+    </script>
+</body>
+</html>
