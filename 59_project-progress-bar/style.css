@@ -1,0 +1,26 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.progress{
+    height: 30px;
+    width: 400px;
+    background-color: rgba(128, 164, 152, 0.637);
+    border-radius: 20px;
+}
+.progress-br{
+    height: 100%;
+    width:0;
+    opacity: 0;
+    color: aliceblue;
+    background: rgba(33, 13, 52, 0.678);
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    transition: 1s ease;
+}
