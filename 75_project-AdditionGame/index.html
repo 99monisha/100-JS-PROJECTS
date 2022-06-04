@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+    background: #fff;
+}
+
+#container{
+    box-sizing:border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: blueviolet;
+    width: 700px;
+    height: 300px;
+    margin: 50px auto;
+    border: 2px solid black;
+}
+
+#primary-number, #secondary-number{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: bold;
+    width: 125px;
+    height: 125px;
+    box-sizing: border-box;
+}
+
+#primary-number{
+    border: solid 4px black;
+}
+
+#secondary-number{
+    border: solid 4px black;
+}
+
+#add, #equal{
+    font-weight: bold;
+    font-size: 40px;
+    padding: 5px;
+}
+input{
+    border: 2px solid black;
+    outline: none;
+    width: 100px;
+    height: 50px;
+    padding-left: 25px;
+    font-size: 20px;
+}
+
+button{
+    width: 100px;
+    height: 35px;
+    margin: 5px;
+    background: crimson;
+    color: white;
+    border: 2px solid black;
+    cursor: pointer;
+
+    
+}
+#btn{
+    padding: 1px 20px;
+    align-items: center;
+    color: black;
+    font-size: 20px;
+    text-align: center;
+}
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="primary-number">7</div>
+        <div id="add">+</div>
+        <div id="secondary-number">10</div>
+        <div id="equal">=</div>
+        <div>
+            <input type="number" id="guess">
+        </div>
+        <div>
+            <button id="btn">check</button>
+        </div>
+    </div>
+    <script>
+        let firstNumber = parseInt(Math.random()*10);
+let secondNumber = parseInt(Math.random()*10);
+let total = firstNumber + secondNumber;
+let primary = document.getElementById('primary-number');
+    primary.innerHTML = `<p>${firstNumber}</p>`;
+let secondary = document.getElementById('secondary-number');
+    secondary.innerHTML = `<p>${secondNumber}</p>`
+let button = document.getElementById('btn')
+button.addEventListener('click', function(){
+let guess = document.getElementById('guess').value;
+    guess = Number(guess);
+if (guess === total){
+    alert('Correct');
+    window.location.reload()
+}
+ else {
+    alert('Sorry. Incorrect. The correct answer was ' + total + '.')
+    window.location.reload()
+
+}});
+    </script>
+</body>
+</html>
