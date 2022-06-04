@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random password Generator</title>
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: blueviolet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.container h1{
+    text-align: center;
+    color: aliceblue;
+    margin-bottom: 70px;
+}
+.PassField{
+    text-align: center;
+    width: 500px;
+    height: 45px;
+    font-weight: 600;
+    padding: 5px;
+    color: black;
+    border: none;
+    outline: none;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+.PassField:hover{
+    cursor: text;
+}
+.button{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.btn{
+    width: 150px;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    background: navy;
+    color: aliceblue;
+    cursor: pointer;
+    outline: none;
+    padding: 15px 20px;
+    border: none;
+    text-align: center;
+}
+.btn1{
+    background: khaki;
+}
+input{
+    font-size: 30px;
+}
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Random Password Generator</h1>
+    <input type="text" id="PassField" class="PassField" placeholder="Generate Password">
+    <div class="button">
+        <div class="btn" id="btn">Generate</div>
+        <div class="btn btn1" id="btn1" onclick="location.reload()">Reset</div>
+    </div>
+</div>
+
+
+    <script>
+      const Btn=document.getElementById("btn");
+      const PassField=document.getElementById("PassField");
+      Btn.addEventListener("click",function(){
+          const allowed={
+          uppers:"ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+          lowers:"abcdefghijklmnopqrstuvwxyz",
+          numbers:"1234567890",
+          symbols:"!@#$%^&"
+        }
+        const ranPass = (str) => str.charAt(Math.floor(Math.random() * str.length));
+        const genePass = (length=12)=>{
+            let password="";
+            password+=ranPass(allowed.uppers);
+            password+=ranPass(allowed.lowers);
+            password+=ranPass(allowed.numbers);
+            password+=ranPass(allowed.symbols);
+            for(let i=password.length;i<length;i++){
+                password+=ranPass(Object.values(allowed).join(''));
+            }
+            return password;
+        }
+        var password=genePass();
+        PassField.value=password;
+      });
+
+    </script>
+</body>
+</html>
