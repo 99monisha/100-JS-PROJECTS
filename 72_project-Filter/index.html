@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtering🥝</title>
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.box{
+    float: left;
+    width: 150px;
+    line-height: 125px;
+    text-align: center;
+    margin: 30px;
+    display: none;
+    border-radius: 26.5px;
+	background-color: #03153B;
+	border: 1px solid #04173f;
+	box-shadow: 0 16px 22px -17px #03153B;
+	color: #fff;
+	font-size: 22px;
+	padding: 14px 22px;
+    align-items: center;
+	
+}
+.show{
+    display: block;
+}
+    
+    .btn{
+        border: 1px solid #04173f;
+	box-shadow: 0 16px 22px -17px #03153B;
+     
+        outline: none;
+        margin-bottom: 30px;
+        background-color: crimson;
+        cursor: pointer;
+        padding: 16px 24px;
+        border-radius: 8px;
+        font-weight: bold;
+        font-size: 20px;
+        font-family: sans-serif;
+        transition: 0.3s;
+    }
+    .btn:hover{
+        padding: 11px 20spx;
+        color: #fff;
+        background-color: transparent;
+    }
+    </style>
+</head>
+<body>
+    <div id="buttons">
+        <button class="btn"onclick="filterObject('all')">Show all</button>
+        <button class="btn"onclick="filterObject('fruits')">Fruits</button>
+        <button class="btn"onclick="filterObject('colors')">Colors</button>
+        <button class="btn"onclick="filterObject('dresses')">Dresses</button>
+        <button class="btn"onclick="filterObject('name')">Name</button>
+    </div>
+
+    <div class="mainBox">
+        <div class="box fruits">Apple</div>
+        <div class="box fruits">Banana</div>
+        <div class="box fruits">Mango</div>
+        <div class="box colors">Red</div>
+        <div class="box colors">Black</div>
+        <div class="box colors">Pink</div>
+        <div class="box dresses">frock</div>
+        <div class="box dresses">Pant</div>
+        <div class="box name">babu</div>
+        <div class="box name">Monisha</div>
+        <div class="box name">Munna</div>
+        <div class="box name">papa</div>
+        <div class="box name">suman</div>
+    </div>
+
+    <script>
+        filterObject("all");
+        function filterObject(c){
+            var x,i;
+            x=document.getElementsByClassName("box");
+            if(c=="all") c="";
+            for(i=0;i<x.length;i++){
+                removeClass(x[i],"show");
+                if(x[i].className.indexOf(c) > -1) addClass(x[i],"show")
+            }
+        }
+
+        function addClass(element,name){
+            var i,ar1,ar2;
+        ar1=element.className.split(" ");
+    ar2=name.split(" ");
+    for(i=0;i<ar2.length;i++){
+if(ar1.indexOf(ar2[i]) == -1){
+    element.className +=" " +ar2[i];
+}
+    }
+
+    }
+    function removeClass(element,name){
+        var i,ar1,ar2;
+        ar1=element.className.split(" ");
+        ar2=name.split(" ");
+        for(i=0;i<ar2.length;i++){
+            while(ar1.indexOf(ar2[i]) > -1){
+                ar1.splice(ar1.indexOf(ar2[i]), 1);
+            }
+        }
+        element.className=ar1.join(" ");
+    }
+    </script>
+</body>
+</html>
