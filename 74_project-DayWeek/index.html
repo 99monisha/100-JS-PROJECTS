@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>When Weekends</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}  body{
+    font-family: sans-serif;
+    margin: 50px;
+    background: #fff;
+}
+#container{
+    width: 650px;
+    height: 350px;
+    background-color: rgba(137, 43, 226, 0.495);
+    margin: auto;
+    border-radius: 30px;
+}
+h1{
+    font-size: 47px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    margin-left: 170px;
+    background: transparent;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+#weekday{
+    font-size: 80px;
+    color: #dd5800;
+    font-weight: 600;
+    margin-left: 170px;
+}
+#phrase{
+    font-size: 40px;
+    color: yellow;
+    font-weight: 600;
+    margin-left: 190px;
+}
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Today is:</h1>
+        <div>
+            <span id="weekday">
+                Display day of the week.
+            </span></br>
+            <span id="phrase">Display a quote</span>
+        </div>
+    </div>
+    <script>
+        let date = new Date();
+let dayOfWeekNumber = date.getDay();
+let nameOfDay;
+let quote;
+
+switch(dayOfWeekNumber){
+    case 0: 
+        nameOfDay = 'Sunday';
+        quote = 'Time to Eating Foods!';
+        break;
+    case 1:
+        nameOfDay = 'Monday';
+        quote = 'Monday morning !';
+        break;
+    case 2:
+        nameOfDay = 'Tuesday';
+        quote = ' 😆';
+        break;
+    case 3:
+        nameOfDay = 'Wednesday';
+        quote = 'Two more days to the weekend 💃 👍';
+        break;
+    case 4:
+        nameOfDay = 'Thursday';
+        quote = 'The weekend is almost here💃 👍';
+        break;
+    case 5:
+        nameOfDay = 'Friday';
+        quote = 'Weekend is here 💃 👍!';
+        break;
+    case 6:
+        nameOfDay = 'Saturday';
+        quote = 'Time to party 💃 👍!';
+        break;
+
+}
+let weekdayDiv = document.getElementById('weekday');
+weekdayDiv.innerHTML = `${nameOfDay}`;
+let quoteDiv = document.getElementById('phrase');
+quoteDiv.innerHTML = `${quote}`
+
+    </script>
+</body>
+</html>
