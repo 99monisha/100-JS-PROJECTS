@@ -5,8 +5,115 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> word counter app</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background: blueviolet;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+        h1{
+            color: #fff;
+            font-size: 40px;
+            margin-bottom: 10px;
+
+        }
+        .subtitle{
+            color: #fff;
+            margin-bottom: 9px;
+            font-size: 20px;
+        }
+        textarea{
+            width: 750px;
+            height: 400px;
+            border: none;
+            resize: none;
+            outline: none;
+            font-size: 20px;
+            color: #000;
+            padding: 50px 30px 50px 30px;
+            border-radius: 8px;
+        }
+        .count{
+            display: flex;
+           align-items: center;
+            flex-direction: row;
+            width: 815px;
+            border-radius: 7px;
+
+           
+           
+        }
+        .box{
+            background-color: aqua;
+            padding: 10px 20px;
+            border-radius: 5px;
+     margin: 0 55px;
+     text-align: center;
+
+        }
+        p{
+            color: #000;
+        }
+        h5{
+            color: #000;
+            font-size: 30px;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="container">
+        <h1>The Word Counter app</h1>
+        <p class="subtitle">
+          For Using This App We Can Calculate The word,sentences and paragraph... 
+        </p>
+        <textarea name="" id="TextArea" rows="16"></textarea>
+        <div class="count">
+            <div class="box">
+                <h5 id="chars">0</h5>
+                <p>Character</p>
+            </div>
+            <div class="box">
+                <h5 id="word">0</h5>
+                <p>word</p>
+            </div>
+            <div class="box">
+                <h5 id="sentence">0</h5>
+                <p>Sentence</p>
+            </div>
+            <div class="box">
+                <h5 id="para">0</h5>
+                <p>paragraph</p>
+            </div>
+        </div>
+    </div>
+
+
+
+   <script>
+       let TextArea=document.getElementById("TextArea");
+       let word=document.getElementById("word");
+       let chars=document.getElementById("chars");
+       let sentence=document.getElementById("sentence");
+       let para=document.getElementById("para");
+
+       TextArea.addEventListener("input",()=>{
+           chars.textContent=TextArea.value.length;
+           let text=TextArea.value.trim();
+           word.textContent=text.split(/\s+/).filter((item)=>item).length;
+       sentence.textContent=text.split(/[.|!|?]+/g).length-1;
+         para.textContent=text.replace(/\$/gm,'').split(/\n/).length;
+
+       });
+   </script> 
 </body>
 </html>
