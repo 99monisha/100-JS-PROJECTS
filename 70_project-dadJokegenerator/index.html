@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+     integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==
+    " crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: rgb(249, 187, 143);
+	font-family: sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	margin: 0;
+}
+
+.container {
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.1), 0 6px 6px rgba(0,0,0,0.1);
+	padding: 50px 20px;
+	text-align: center;
+	max-width: 100%;
+	width: 800px;
+}
+
+h3 {
+	opacity: 0.5;
+	letter-spacing: 2px;
+	margin: 0;
+}
+
+.joke {
+	font-size: 20px;
+	letter-spacing: 0.6px;
+	line-height: 40px;
+	margin: 50px auto;
+	max-width: 600px;
+}
+
+.btn {
+	background-color: crimson;
+	border: 0;
+	border-radius: 10px;
+	box-shadow: 0 5px 15px rgba(0,0,0,0.1), 0 6px 6px rgba(0,0,0,0.1);
+	color: #fff;
+	cursor: pointer;
+	font-size: 16px;
+	padding: 14px 40px;
+}
+
+.btn:active {
+	transform: scale(0.98);
+}
+
+.btn:focus {
+	outline: 0;
+}
+.social-panel-container {
+	position: fixed;
+	right: 0;
+	bottom: 80px;
+	transform: translateX(100%);
+	transition: transform 0.4s ease-in-out;
+}
+
+.social-panel-container.visible {
+	transform: translateX(-10px);
+}
+
+.social-panel {	
+	background-color: #fff;
+	border-radius: 16px;
+	box-shadow: 0 16px 31px -17px rgba(0,31,97,0.6);
+	border: 5px solid #001F61;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Muli';
+	position: relative;
+	height: 169px;	
+	width: 370px;
+	max-width: calc(100% - 10px);
+}
+
+.social-panel button.close-btn {
+	border: 0;
+	color: #97A5CE;
+	cursor: pointer;
+	font-size: 20px;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+}
+
+.social-panel button.close-btn:focus {
+	outline: none;
+}
+
+.social-panel p {
+	background-color: #01184a;
+	border-radius: 0 0 10px 10px;
+	color: #fff;
+	font-size: 14px;
+	line-height: 18px;
+	padding: 2px 17px 6px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin: 0;
+	transform: translateX(-50%);
+	text-align: center;
+	width: 235px;
+}
+
+.social-panel p i {
+	margin: 0 5px;
+}
+
+.social-panel p a {
+	color: #fff;
+	text-decoration: none;
+    font-size: 16px;
+}
+
+.social-panel h4 {
+	margin: 20px 0;
+	color: #515e84;	
+	font-family: 'Muli';	
+	font-size: 14px;	
+	line-height: 18px;
+	text-transform: uppercase;
+}
+
+.social-panel ul {
+	display: flex;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.social-panel ul li {
+	margin: 0 10px;
+}
+
+.social-panel ul li a {
+	border: 1px solid #DCE1F2;
+	border-radius: 50%;
+	color: #021640;
+	font-size: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 50px;
+	width: 50px;
+	text-decoration: none;
+}
+
+.social-panel ul li a:hover {
+	border-color: crimson;
+	box-shadow: 0 9px 12px -9px crimson;
+}
+
+.floating-btn {
+	border-radius: 26.5px;
+	background-color: #03153B;
+	border: 1px solid #04173f;
+	box-shadow: 0 16px 22px -17px #03153B;
+	color: #fff;
+	cursor: pointer;
+	font-size: 16px;
+	line-height: 20px;
+	padding: 12px 20px;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 999;
+}
+
+.floating-btn:hover {
+	background-color: #ffffff;
+	color: #4e7fea;
+}
+
+.floating-btn:focus {
+	outline: none;
+}
+
+.floating-text {
+	background-color: #001F61;
+	border-radius: 10px 10px 0 0;
+	color: #fff;
+	font-family: 'Muli';
+	padding: 7px 15px;
+	position: fixed;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	text-align: center;
+	z-index: 998;
+}
+
+.floating-text a {
+	color: crimson;
+	text-decoration: none;
+}
+
+@media screen and (max-width: 480px) {
+
+	.social-panel-container.visible {
+		transform: translateX(0px);
+	}
+	
+	.floating-btn {
+		right: 10px;
+	}
+}
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h3>😃😃😃😃This is 😃😃😃😃</h3>
+        <div id="joke" class="joke"></div>
+        </div>
+        <button id="get_joke" class="btn">Get Another Joke</button>
+    </div>
+    <div class="social-panel-container">
+        <div class="social-panel">
+            <p><i class="fa fa-heart"></i>
+                <a target="_blank" href="#">Monisha Dolai</a></p>
+            <button class="close-btn"><i class="fas fa-times"></i></button>
+            <h4>Contact With Me</h4>
+            <ul>
+                <li>
+                    <a href="#" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+             
+                <li>
+                    <a href="#" target="_blank">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <button class="floating-btn">
+       Conect With Me🥰
+    </button>
+    
+    <script>
+        const jokeEl = document.getElementById('joke');
+const get_joke = document.getElementById('get_joke');
+get_joke.addEventListener('click', generateJoke);
+generateJoke();
+async function generateJoke() {
+	const jokeRes = await fetch('https://icanhazdadjoke.com/', {
+		headers: {
+			'Accept': 'application/json'}
+	});
+	const joke = await jokeRes.json();
+	jokeEl.innerHTML = joke.joke;
+}
+const floating_btn = document.querySelector('.floating-btn');
+const close_btn = document.querySelector('.close-btn');
+const social_panel_container = document.querySelector('.social-panel-container');
+
+floating_btn.addEventListener('click', () => {
+	social_panel_container.classList.toggle('visible')
+});
+
+close_btn.addEventListener('click', () => {
+	social_panel_container.classList.remove('visible')
+});
+    </script>
+</body>
+</html>
