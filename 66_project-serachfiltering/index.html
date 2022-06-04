@@ -4,9 +4,64 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <title>Search filtering</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+    </style>
 </head>
 <body>
-    
+<div class="container-fluid text-white py-5"style="background:#000">
+    <h1 class="text-center">search Your Text</h1>
+    <h5 class="text-center">Search Your Choice here</h5>
+</div>
+<div class="container col-6 mt-5">
+    <input type="text" class="from-control mb-5 p-3" placeholder="search here..." id="serach-input">
+    <ul class="list-group list-group-flush text-primary h5">
+    <li class="list-group-item p-3">Suman</li>
+    <li class="list-group-item p-3">Monisha</li>
+    <li class="list-group-item p-3">kalpana</li>
+    <li class="list-group-item p-3">papa</li>
+    <li class="list-group-item p-3">Mango</li>
+    <li class="list-group-item p-3">Light</li>
+    <li class="list-group-item p-3">Pilu</li>
+    <li class="list-group-item p-3">munna</li>
+    <li class="list-group-item p-3">Sosa</li>
+    <li class="list-group-item p-3">Moni</li>
+    <li class="list-group-item p-3">pana</li>
+    <li class="list-group-item p-3">papababu</li>
+    <li class="list-group-item p-3">Mango icecream</li>
+    <li class="list-group-item p-3">Light off</li>
+    <li class="list-group-item p-3">PiluMilu</li>
+    <li class="list-group-item p-3">munnababu</li></ul>
+</div>
+
+    <script>
+        document.querySelector("#serach-input").
+        addEventListener('input',filterList);
+        function filterList(){
+            const searchIn=document.querySelector('#serach-input');
+            const filter =searchIn.value.toLowerCase();
+            const listItems=document.querySelectorAll('.list-group-item');
+            listItems.forEach((item)=>{
+                let text=item.textContent;
+                if(text.toLowerCase().includes(filter.toLowerCase())){
+                    item.style.display='';
+                }
+                else{
+                    item.style.display='none';
+                }
+            });
+        }
+    </script>
 </body>
 </html>
