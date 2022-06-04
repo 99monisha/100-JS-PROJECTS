@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <title>WelCome Messages</title>
+    <style>
+        .btn{
+            border-radius: 26.5px;
+	background-color: #03153B;
+	border: 1px solid #04173f;
+	box-shadow: 0 16px 22px -17px #03153B;
+	color: #fff;
+	cursor: pointer;
+	font-size: 22px;
+	line-height: 20px;
+	padding: 14px 22px;
+    align-items: center;
+	z-index: 999;
+    margin-top: 30px;
+        }
+        .btn:hover {
+	background-color: #ffffff;
+	color: #4e7fea;
+}
+
+.btn:focus {
+	outline: none;
+}
+    </style>
+</head>
+<body>
+    <div id="output"></div>
+    <label>Name:</label><input type="text" class="from-control mb-5 p-3" placeholder="Enter Your Name Here.">
+    <button class="btn">Message</button>
+</body>
+<script>
+    const btn = document.querySelector('button');
+    btn.addEventListener('click', function(){
+        const output = document.querySelector('#output');
+        const name = document.querySelector('input').value;
+        output.innerHTML = `<h1>Hello and welcome, ${name}</h1>`;
+    })
+</script>
+</html>
