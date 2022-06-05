@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> :checkbox</title>
+    <style>
+         html {
+      font-family: sans-serif;
+      background:#000;
+    }
+
+    .inbox {
+      max-width:400px;
+      margin:50px auto;
+      background:white;
+      border-radius:5px;
+      box-shadow:10px 10px 10px 10px plum;
+    }
+    .item {
+      display:flex;
+      align-items:center;
+      border-bottom: 1px solid plum;
+    }
+
+    .item:last-child {
+      border-bottom:0;
+    }
+
+
+    input:checked + p {
+      background:#fff;
+      text-decoration: line-through;
+    }
+
+    input[type="checkbox"] {
+      margin:20px;
+    }
+
+    p {
+      margin:0;
+      padding:20px;
+      transition:all 0.2s;
+      flex:1;
+      font-family:'helvetica neue';
+      font-size: 20px;
+      font-weight: 200;
+      border-left: 1px solid #9fc0f9;
+    }
+
+
+    </style>
+</head>
+<body>
+    <div class="inbox">
+        
+      <div class="item">
+        <input type="checkbox">
+        <p>Ami 100 js project korle papa amake eggroll khouabe 💁</p>
+      </div>
+      <div class="item">
+        <input type="checkbox">
+        <p>Sei jonnoiii ami atoo kosto kore 100 js project korchi</p>
+      </div>
+      <div class="item">
+        <input type="checkbox">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, perspiciatis.</p>
+      </div>
+      <div class="item">
+        <input type="checkbox">
+        <p>eggroll na dile ami r kichu kothaii sunbo na</p>
+      </div>
+      <div class="item">
+        <input type="checkbox">
+        <p>R 100js project na korle papa amr sathe r kotha bolbe na 😲</p>
+      </div>
+    </div>
+  
+  <script>
+      const checkboxes = document.querySelectorAll('.inbox input[type = "checkbox"]');
+
+let lastChecked;
+
+  function handleCheck(e) {
+
+    let inBetween = false;
+
+if (e.shiftKey && this.checked) {
+    checkboxes.forEach(checkbox => {
+    console.log(checkbox);
+    if (checkbox === this || checkbox === lastChecked) {
+      inBetween = !inBetween;
+      console.log('STarting to check them inbetween!');
+    }
+
+    if (inBetween) {
+      checkbox.checked = true;
+    }
+  });
+}
+
+lastChecked = this;
+}
+
+checkboxes.forEach(checkbox => checkbox.addEventListener('click', handleCheck));
+
+  </script>
+</body>
+</html>
