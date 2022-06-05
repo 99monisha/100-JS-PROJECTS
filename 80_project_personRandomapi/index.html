@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <title>🧑‍🦲</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row max-height ">
+         <div class="col-11 mx-auto person col-md-8 col-lg-6 my-3">
+          <div class="card">
+           <img src="1.webp" class="card-img-top" alt="" id="photo">
+           <div class="card-body">
+       <div class="person-info">
+             <p class="text-capitalize"><span class="mr-3 text-primary"><i class="fas fa-user"></i></span>name :<span id="first"
+               class="text-uppercase ml-2 badge badge-secondary single-info">Monisha</span></p>
+            <p class="text-capitalize"><span class="mr-3 text-primary"><i class="fas fa-user"></i></span>last name :<span id="last"
+               class="text-uppercase ml-2 badge badge-secondary single-info">Dolai</span></p>
+           <p class="text-capitalize"><span class="mr-3 text-primary"><i class="fas fa-search-location"></i></span>location
+              :<span id="street" class="text-uppercase ml-2 badge badge-secondary single-info">Kolkata</span></p>
+             <p class="text-capitalize"><span class="mr-3 text-primary"><i class="fas fa-phone"></i></span>phone :<span id="phone"
+               class="text-uppercase ml-2 badge badge-secondary single-info">8796766756</span></p>
+            <p class="text-capitalize"><span class="mr-3 text-primary"><i class="fas fa-envelope"></i></span>email :<span id="email"
+               class="text-uppercase ml-2 badge badge-secondary single-info">moni@gmail.com</span></p>
+        </div>
+           </div>
+           <div class="card-footer text-center">
+      <button type="button" id="btn" class="btn btn-outline-warning text-capitalize">generate person</button>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      
+      
+      
+    <script>
+        const btn = document.getElementById("btn");
+btn.addEventListener("click", function() {
+  getPerson(getData);
+});
+
+function getPerson(callback) {
+  const url = `https://randomuser.me/api/`;
+  const ajax = new XMLHttpRequest();
+  ajax.open("GET", url, true);
+
+  ajax.onload = function() {
+    if (this.status === 200) {
+      callback(this.responseText, showData);
+    } else {
+      console.log(this.statusText);
+    }
+  };
+
+  ajax.onerror = function() {
+    console.log("there was an error");
+  };
+  ajax.send();
+}
+
+function getData(response, callback) {
+  const data = JSON.parse(response);
+  const {
+    name: { first },
+    name: { last },
+    picture: { large },
+    location: { street },
+    phone,
+    email
+  } = data.results[0];
+
+  callback(first, last, large, street, phone, email);
+}
+function showData(first, last, large, street, phone, email) {
+  document.getElementById("first").textContent = first;
+  document.getElementById("last").textContent = last;
+  document.getElementById("street").textContent = street;
+  document.getElementById("phone").textContent = phone;
+  document.getElementById("email").textContent = email;
+  document.getElementById("photo").src = large;
+}
+    </script>
+</body>
+</html>
