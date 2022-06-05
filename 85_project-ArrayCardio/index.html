@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            background: #000;
+        }
+        p{
+            text-align: center;
+            font-size: 3rem;
+            color: palevioletred;
+            font-family: cursive;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+   
+    <p>Console Ea te Gea Dekho Bujte Parbe 😄😈</p>
+    <script>
+         
+    const inventors = [{
+      first: 'Nicolaus',
+      last: 'Copernicus',
+      year: 1473,
+      passed: 1543
+    }, {
+      first: 'Max',
+      last: 'Planck',
+      year: 1858,
+      passed: 1947
+    }, {
+      first: 'Katherine',
+      last: 'Blodgett',
+      year: 1898,
+      passed: 1979
+    }, {
+      first: 'Ada',
+      last: 'Lovelace',
+      year: 1815,
+      passed: 1852
+    }, {
+      first: 'Sarah E.',
+      last: 'Goode',
+      year: 1855,
+      passed: 1905
+    }, {
+      first: 'Lise',
+      last: 'Meitner',
+      year: 1878,
+      passed: 1968
+    }, {
+      first: 'Hanna',
+      last: 'Hammarström',
+      year: 1829,
+      passed: 1909
+    }];
+    const people = ['Beecher, Henry', 'Beethoven, Ludwig', 'Begin, Menachem', 'Belloc, Hilaire', 'Bellow, Saul', ' Sandra', 'Berra, Yogi', 'Berry, Halle', 'Berry, Wendell', 'Bethea, Erin', 'Bevan, Aneurin', 'Bevel, Ken', 'Biden, Joseph', 'Bierce, Ambrose', 'Biko, Steve', 'Billings, Josh', 'Biondo, Frank', 'Birrell, Augustine', 'Black, Elk', 'Blair, Robert', 'Blair, Tony', 'Blake, William'];
+    const filteredArray = inventors.filter(inventor => (inventor.year >= 1500 && inventor.year < 1600));
+    console.table(filteredArray);
+    const fullNames = inventors.map(inventor => `${inventor.first} ${inventor.last}`);
+    console.log(fullNames);
+    const sortedArray = inventors.sort((a, b) => a.year > b.year ? 1 : -1);
+    console.table(sortedArray);
+    const totalYears = inventors.reduce((total, inventor) => {
+      return total + (inventor.passed - inventor.year);
+    }, 0);
+    console.log(totalYears);
+    const sortedByYearsLived = inventors.sort((a,b) => {
+      return (a.passed-a.year) > (b.passed-b.year) ? 1 : -1;
+    });
+    console.table(sortedByYearsLived);
+    console.log('N/A');
+    const sortedFolks = people.sort((a,b) => {
+      const [alast, afirst] = a.split(', ');
+      const [blast, bfirst] = b.split(', ');
+      return alast > blast ? 1 : -1;
+    });
+    console.log(sortedFolks);
+    const data = ['car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck'];
+    const transportation = data.reduce((obj, item) => {
+      obj[item]++;
+      return obj;
+    }, {
+      car: 0,
+      truck: 0,
+      van: 0,
+      bike: 0,
+      walk: 0
+    });
+    console.table(transportation);
+    </script>
+</body>
+</html>
