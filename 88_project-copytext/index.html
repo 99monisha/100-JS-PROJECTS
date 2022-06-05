@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy Text</title>
+</head>
+<body style = "text-align:center;">
+    <h1 style = "color:orange;" >
+        You Can Copy Any Text From Here 👍
+    </h1>
+    <input type="text" value="coo" id="Coo">
+    <button onclick="Coppp()">Copy text</button>
+    <script>
+        function Coppp() {
+        var myYy = document.getElementById("Coo");
+        myYy.select();
+        document.execCommand("copy");
+        alert("Copied the text: " + myYy.value);
+        }
+    </script>
+    <p>
+        Akhane Click kore jekhane icche paste kore din
+    </p>
+</body>
+</html>
