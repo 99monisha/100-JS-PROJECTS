@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>ClickingGaming 🎲</title>
+    <style>
+    .box{
+    position: relative;
+    border-radius: 50%;
+    background-color: red;
+    width: 100px;
+    height: 100px;
+}
+
+body{
+    text-align: center;
+    font-size: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    background-color: rgb(232, 251, 193);
+}
+.box{
+    position: relative;
+    border-radius: 20%;
+    background-color: red;
+    width: 140px;
+    height: 130;
+}
+button{
+    font-size: 1.5rem;
+    margin: 25px;
+    background-color: olive;
+    border: none;
+    color: white;
+    width: 150px;
+    height: 50px;
+    border-radius: 17px;
+    box-shadow: 1em;
+    cursor: pointer;
+}
+
+#winner{
+    color: rgb(105, 253, 105);
+}
+
+#loser{
+    color: rgb(247, 119, 119);
+}
+
+.results{
+    font-weight: bold;
+}
+    </style>
+</head>
+<body>
+    <div class="directions"><h3>Click the following circles within 1 second to score. <br>Get 100 points to win! <br> game 😃</h3></div>
+    <button type="button">Start</button>
+    <div class="message"></div>
+    <div class="results"></div>
+    <div class="gameArea"></div>
+    
+<script>
+const message = document.querySelector('.message');
+const button = document.querySelector('button');
+const gameArea = document.querySelector('.gameArea');
+const results = document.querySelector('.results');
+const directions = document.querySelector('.directions');
+let inPlay = false;
+let playArea = {};
+let count = 0;
+function showMessage(notification){
+    message.innerHTML = `<h3>${notification}</h3>`;}
+function showBox(){
+    playArea.timer = setTimeout(myBox, random(4000));}
+function myBox(){
+    let element = document.createElement('div');
+    element.classList.add('box');
+    element.style.top = random(setTopMargin()) + 'px';
+    element.style.left = random(setLeftMargin()) + 'px';
+    element.style.backgroundColor = getColor();
+    element.start = new Date().getTime();
+    element.addEventListener('click', hit);
+    gameArea.appendChild(element);}
+function getColor(){
+    function col(){
+        let hex = random(255).toString(16);
+        return ('0' + String(hex)).substr(-2);}
+    return '#' + col() + col() + col();}
+function setTopMargin(){
+    let maxHeight = gameArea.clientHeight;
+    if (maxHeight <= 100){
+        maxHeight = maxHeight + 200;} else {
+        maxHeight = maxHeight - 200;}
+    return maxHeight;}
+function setLeftMargin(){
+    let maxWidth = gameArea.clientWidth;
+    if (maxWidth <= 100){
+        maxWidth = maxWidth + 200;} else {
+        maxWidth = maxWidth - 200;}
+    return maxWidth;}
+function hit(e){
+    let start = e.target.start;
+    let end = new Date().getTime();
+    let duration = (end-start)/1000;
+    let maxDuration = 1;
+    clearTimeout(playArea.timer);
+    showMessage('It took you ' + duration + ' seconds to click');
+    if (duration > maxDuration){
+        gameArea.children[0].remove();
+        results.innerHTML = `Too Slow! <span id="loser">You Lose!</span> Your score was ${count}.<br> Click the start button to play again!`;
+        resetGame();
+    } else {
+        gameArea.children[0].remove();
+        playArea.timer = setTimeout(myBox, random(4000));
+        count++;
+        if (count === 15){
+            results.innerHTML = `You reached ${renderCount(count)}! <span id="winner">You win!</span> <br> Click start to Play again.`;
+            resetGame();
+        } else {
+            results.innerHTML = `Score: ${renderCount(count)} of 15`;
+        }}}
+function renderCount(count){
+    return count;}
+function random(number){
+    let tempVal = Math.floor(Math.random()*number);
+    return tempVal;}
+function resetGame(){
+    clearTimeout(playArea.timer);
+    inPlay = false;
+    button.style.display = 'block';}
+showMessage('Click to Play');
+button.addEventListener('click', function(){
+        inPlay = true;
+        button.style.display = 'none';
+        directions.style.display = 'none';
+        results.innerHTML = '';
+        count = 0;
+    showMessage('Just a moment...');
+    showBox();})
+    </script>
+</body>
+</html>
