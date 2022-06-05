@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: cursive;
+        }
+    </style>
+</head>
+<body>
+    <h1>Placeholder Image Generator</h1>
+<h3>Dimensions</h3>
+<input type="number" class="input" id="inputWidth" value="400">
+x
+<input type="number" class="input" id="inputHeight" value="300">
+<button id="buttonGenerate" type="button">Generate</button>
+
+<h3>Data URL</h3>
+<input type="text" class="input" id="inputDataUrl" placeholder="Please generate a placeholder image!" readonly>
+
+<h3>Colect Your Image Size link url</h3>
+<img alt="Preview Image" id="imagePreview" style="display: none">
+    <script>
+        const inputWidth = document.getElementById("inputWidth");
+const inputHeight = document.getElementById("inputHeight");
+const inputDataUrl = document.getElementById("inputDataUrl");
+const imagePreview = document.getElementById("imagePreview");
+
+document.getElementById("buttonGenerate").addEventListener("click", () => {
+  const MIN_SIDE_LENGTH = 200;
+  if (
+    isNaN(inputWidth.value) ||
+    isNaN(inputHeight.value) ||
+    inputWidth.value < MIN_SIDE_LENGTH ||
+    inputHeight.value < MIN_SIDE_LENGTH
+  ) {
+    alert(
+      `Please enter a valid image size. The minimum length is ${MIN_SIDE_LENGTH}px`
+    );
+    return;
+  }
+
+  const canvasElement = createPlaceholderCanvas(
+    inputWidth.value,
+    inputHeight.value
+  );
+  const dataUrl = canvasElement.toDataURL();
+
+  inputDataUrl.value = dataUrl;
+  imagePreview.src = dataUrl;
+  imagePreview.style.display = "block";
+  imagePreview.style.maxWidth = `${inputWidth.value}px`;
+});
+
+function createPlaceholderCanvas(width, height) {
+  const element = document.createElement("canvas");
+  const context = element.getContext("2d");
+
+  element.width = width;
+  element.height = height;
+  context.fillStyle = "#aaaaaa";
+  context.fillRect(0, 0, element.width, element.height);
+  context.font = "bold 90px sans-serif";
+  context.fillStyle = "#333333";
+  context.textAlign = "center";
+  context.textBaseline = "middle";
+  context.fillText(`${width}x${height}`, element.width / 2, element.height / 2);
+
+  return element;
+}
+
+    </script>
+</body>
+</html>
