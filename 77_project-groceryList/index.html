@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery List</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+           
+            font-family: cursive;
+        }
+        body{
+            background: orange;
+        }
+        h1,.Gro{
+            text-align: center;
+        }
+        .container{
+            border: 1px solid #000;
+            width: 90%;
+            margin: auto;
+            display: flex;
+        }
+        .grocery{
+            border: 1px solid #000;
+            width: 600px;
+            min-height: 100vh;
+            margin: auto;
+            background: #fff;
+            box-shadow: 10px 10px 25px 0 #777;
+
+
+
+        }
+        .grocery h1{
+            font-size: 2.5rem;
+            margin-top: 1em;
+        }
+        .Gro #pencil{
+font-size: 1.8rem;
+
+        }
+        .Gro input{
+            outline: 0;
+            border: 0;
+            border-bottom: 3px solid #000;
+            font-size: 1.6rem;
+        }
+        .allItem h2{
+            margin-left: 50px;
+            margin-right: 10px;
+            margin-top: 15px;
+            font-size: 2rem;
+        }
+        @media (max-width:480) {
+            .grocery h1{
+            font-size: 2rem;}
+    
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="grocery">
+            <h1>Grocery list</h1><br>
+            <div class="Gro">
+                <span class="pencil">🖌️</span>
+                <input type="text" class="userInput">
+            </div><br>
+            <div class="allItem">
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+    <script>
+const grocery=document.getElementsByClassName("const grocery")[0];
+const pencil=document.getElementsByClassName("pencil");
+const allItem=document.getElementsByClassName("allItem");
+const userInput=document.getElementsByClassName("userInput");
+
+pencil.addEventListener("click",function(){
+    allItem.innerHTML="";
+})
+
+userInput.addEventListener("keydown",function(event){
+    if(event.key == "Enter")
+    addItem();
+})
+function addItem(){
+    var h2=document.createElement("h2");
+    h2.innerHTML="_" + userInput.value;
+    h2.addEventListener("click",function(){
+        h2.style.textDecoration="line-through";
+    })
+    addItems.insertAdjacentElement("beforeend",h2);
+}
+
+    </script>
+</body>
+</html>
