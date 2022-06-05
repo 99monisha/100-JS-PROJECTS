@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Name With Band Name 🥇</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: cursive;
+            background-color: olive;
+        }
+        h1{
+            font-size: 4rem;
+            text-align: center;
+            padding: 20px;
+
+        }
+        ul{
+            text-decoration: solid;
+            font-size: 2rem;
+            font-weight: 600;
+            color: aliceblue;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔹🔹🔹🔹🔹🔹</h1>
+    <ul id="bands"></ul>
+    <script>
+       
+       
+       const bands = [
+    "The Plot in You",
+    "The Devil Wears Prada",
+    "Pierce the Veil",
+    "Norma Jean",
+    "The Bled",
+    "Say Anything",
+    "The Midway State",
+    "We Came as Romans",
+    "Counterparts",
+    "Oh, Sleeper",
+    "A Skylit Drive",
+    "Anywhere But Here",
+    "An Old Dog"
+];
+
+function strip (word) {
+    let regex = new RegExp('^(a |the |an )', 'i')
+    return word.replace(regex, '').trim()
+}
+
+const sortedBands = bands.sort((a, b) => (strip(a) > strip(b)) ? 1 : -1)
+
+document.querySelector('#bands').innerHTML = 
+    sortedBands.map(item => `<li>${item}</li>`).join('')
+    </script>
+</body>
+</html>
