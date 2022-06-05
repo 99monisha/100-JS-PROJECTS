@@ -1,0 +1,48 @@
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    font-family: cursives;
+    background-color: rgb(253, 229, 184);
+}
+h1{
+    font-size: 47px;
+    font-weight: 600;
+    color: #000;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    margin-left: 170px;
+    background: transparent;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+button{
+    width: 10%;
+    border: none;
+    outline: none;
+    color: #fff;
+    padding: 16px 0;
+    margin-top: 20px;
+    background: blueviolet;border-radius: 4px;
+    cursor: pointer;
+    font-size: 19px;
+    opacity: 0.7;
+
+}
+strong{
+    font-size: 28px;
+    font-weight: 600;
+    margin-top: 5px;
+    background: rgb(186, 142, 226);
+    padding: 3px;
+}
+p{
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: 5px;
+    padding: 3px;
+}
