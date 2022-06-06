@@ -1,0 +1,152 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#root{
+    display: flex;
+    flex-wrap: wrap;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #eee;
+    font-family: system-ui;
+}
+nav{
+    width: 100%;
+    display: flex;
+    font-weight: 600;
+    min-height: 10vh;
+    background-color: rgba(56, 56, 128, 0.466);
+    font-size: 3rem;
+    align-items: center;
+    padding: 0 3rem;
+    justify-content: center;
+
+}
+nav .logo{
+    letter-spacing: 2px;
+    color: rgb(10, 0, 0);
+    cursor: pointer;
+}
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 0 0 0;
+}
+form{
+    width: 300px;
+    background-color: transparent;
+    padding: 1rem 2rem;
+   border: 2px solid #000;
+}
+.form-control{
+    display: flex;
+    flex-direction: column;
+    margin: 1.5rem 0;
+}
+input{
+    padding: 10px 0 ;
+    width: 100%;
+    font-size: 18px;
+    letter-spacing: 1px;
+    border: 0;
+    border-bottom: 2px solid #777;
+    background-color: transparent;
+    outline: none;
+}
+input:placeholder-shown{
+    letter-spacing: 2px;
+    font-size: 15px;
+}
+.form-control label{
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding-bottom: 7px;
+}
+.submit{
+    width: 60px;
+    height: 30px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    box-shadow: 0 0 5px #000;
+    background-color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+}
+.submit:hover{
+    background-color: #777;
+    box-shadow: 0 0 10px rgba(56, 56, 128, 0.466);
+    transition: all 0.5s;
+    border: 2px solid rgba(56, 56, 128, 0.76);
+}
+.notes{
+    width: 100%;
+    display: flex;
+    padding: 3rem 2rem 2rem 2rem;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.card{
+
+    padding: 1rem 1.5rem 1rem;
+    width: 25rem;
+    border: 2px solid #000;
+    margin: 1rem 2rem;
+    height: 25rem;
+}
+.card h3{
+    font-size: 2.3rem;
+    padding-bottom: 7px;
+    position: relative;
+    display: inline;
+}
+.card p{
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
+    padding: 1rem 0;
+}
+.card h3::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    bottom: 6px;
+    left: 0;
+    background: rgba(56, 56, 128, 0.466);
+}
+.del{
+    padding: 8px 15px;
+    letter-spacing: 1px;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background: rgba(56, 56, 128, 0.466);
+    color: rgb(66, 65, 65);
+    margin-top: 120px;
+    
+}
+.del:hover{
+    background: rgba(108, 108, 220, 0.466);
+    transition: all 0.4s;
+    color: #fff;
+}
+footer{
+   width: 100%;
+   text-align: center;
+   font-size: 1.5rem;
+   position: fixed;
+   bottom: 10px;
+}
