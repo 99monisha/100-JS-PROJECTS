@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 🥰</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: cursive;
+            box-sizing: border-box;
+        }
+        .canvas {
+    background-color: orange;
+    color: white;
+    font-size: 2.4rem;
+    width: 70%;
+    letter-spacing: 2px;
+    height: 500px;
+    margin: 50px auto;
+    text-align: center;
+    padding: 5px;
+}
+
+#message{
+    color: orangered;
+    font-size: 1.5em;
+}
+
+button {
+    font-size: 1.3em;
+    margin-top: 50px;
+    border-radius: 7.5px;
+    border-radius: none;
+}
+    </style>
+</head>
+<body>
+    <div class="canvas">
+        <h1>Click To Greetings!</h1>
+        <div id="message"></div>
+        <button>Get Message</button>
+        <script src="app.js"></script>
+    </div>
+    <script>
+        const date = new Date();
+const hour = date.getHours();
+const button = document.querySelector('button');
+const messageArea = document.querySelector('#message');
+button.addEventListener('click', function(){
+if (hour > 17){
+    messageArea.innerHTML = `<h1>Good evening!</h1>`;
+} else if (hour > 12){
+    messageArea.innerHTML = `<h1>Good afternoon!</h1>`;
+} else {
+    messageArea.innerHTML = `<h1>Good morning!</h1>`;
+}
+})
+    </script>
+</body>
+</html>
