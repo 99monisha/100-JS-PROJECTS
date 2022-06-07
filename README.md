@@ -194,323 +194,175 @@
         <td><a href="https://github.com/99monisha/javascript-pro/blob/main/37_projectfont-styling/index.html">Css Styling Js</a></td>
         <td>july@example.com</td>
       </tr>
-     
-       <tr>
-        <td>38</td>
-        <td><a href="https://github.com/99monisha/javascript-pro/blob/main/38_projectlight-off-on/index.html">Light Off-On</a></td>
-        <td>july@example.com</td>
-      </tr>
-       <tr>
-        <td>39</td>
-        <td><a href="https://github.com/99monisha/javascript-pro/blob/main/39_project-login-page/index.html">Advanced Login Page with Validation</a></td>
-        <td>july@example.com</td>
-      </tr>
-       <tr>
-        <td>40</td>
-        <td><a href="https://github.com/99monisha/javascript-pro/tree/main/3_project-login%20form">Many Light Off-On</a></td>
-        <td>july@example.com</td>
-      </tr>
-       <tr>
-        <td>41</td>
-        <td><a href="https://github.com/99monisha/javascript-pro/blob/main/41_project-open-close-face/index.html">Open Close face</a></td>
-        <td>july@example.com</td>
-      </tr>
-       <tr>
-        <td>42</td>
-        <td><a href="https://github.com/99monisha/javascript-pro/blob/main/42_project-scroll-bar/index.html">Smooth Scroll Bar</a></td>
-        <td>july@example.com</td>
-      </tr>
-       <tr>
-        <td>43</td>
-        <td><a href="https://github.com/99monisha/javascript-pro/tree/main/43_project-simple-calci">Basic Calculator</a></td>
-        <td>july@example.com</td>
-      </tr>
-       <tr>
-        <td>44</td>
-        <td><a href="https://github.com/99monisha/javascript-pro/blob/main/44_project-simple-counter/index.html">Basic Counter</a></td>
-        <td>july@example.com</td>
-      </tr>
-       <tr>
-        <td>45</td>
-        <td><a href="https://github.com/99monisha/javascript-pro/blob/main/45_project-simple-stopwatch/index.html">Stop Watch</a></td>
-        <td>july@example.com</td>
-      </tr>
-       <tr>
-        <td>46</td>
-        <td><a href="https://github.com/99monisha/javascript-pro/blob/main/46_project-slider-Three/index.html">Styling Slider</a></td>
-        <td>july@example.com</td>
-      </tr>
-       <tr>
-        <td>47</td>
-        <td><a href="https://github.com/99monisha/javascript-pro/blob/main/47_project-slider-one/index.html">Fade Slider</a></td>
-        <td>july@example.com</td>
-      </tr>
-       <tr>
-        <td>48</td>
-        <td><a href="https://github.com/99monisha/javascript-pro/blob/main/48-project-slider-video/index.html">Video Slider</a></td>
-        <td>july@example.com</td>
-      </tr>
-       <tr>
-        <td>49</td>
-        <td><a href="https://github.com/99monisha/javascript-pro/blob/main/49-project-sms-sender/index.html">Message Sender</a></td>
-        <td>july@example.com</td>
-      </tr>
-       <tr>
-        <td>50</td>
-        <td><a href="https://github.com/99monisha/javascript-pro/blob/main/50-project-sticky-navbar/index.html">Stickey Navbar</a></td>
-        <td>july@example.com</td>
-      </tr>
-       <tr>
-        <td>51</td>
-        <td><a href="https://github.com/99monisha/javascript-pro">Student Marks Calculator</a></td>
-        <td>july@example.com</td>
-      </tr>
-       <tr>
-        <td>52</td>
-        <td><a href="https://github.com/99monisha/javascript-pro/blob/main/52-project-slider-two/index.html">Product Slider</a></td>
-        <td>july@example.com</td>
-      </tr>
-       <tr>
-        <td>53</td>
-        <td><a href="https://github.com/99monisha/javascript-pro/tree/main/53-project-ne%20js%20app">Find Meal Ingredients</a></td>
-        <td>july@example.com</td>
-      </tr>
-       <tr>
-        <td>54</td>
-        <td><a href="https://github.com/99monisha/javascript-pro/blob/main/55-project-student-grade-calculator/index.html">Adv Studen Grade Calci(2)</a></td>
-        <td>july@example.com</td>
-      </tr>
-       <tr>
-           <tr>
-        <td>55</td>
-        <td><a href="https://github.com/99monisha/javascript-pro/tree/main/55-project-student-grade-calculator">VAlidate Studen Calci</a></td>
-        <td>july@example.com</td>
-      </tr>
-        <td>56</td>
-        <td><a href="https://github.com/99monisha/javascript-pro/tree/main/56-project-Timer1">Basic Timer</a></td>
-        <td>july@example.com</td>
-      </tr>
-     
-       <tr>
-        <td>57</td>
-        <td><a href="https://github.com/99monisha/javascript-pro/blob/main/57-project-todo-list/index.html">Advanced Todo List</a></td>
-        <td>july@example.com</td>
-      </tr>
-       <tr>
-        <td>58</td>
-        <td><a href="https://github.com/99monisha/javascript-pro/blob/main/58-project-word-length/index.html">Basic Word Length</a></td>
-        <td>july@example.com</td>
-      </tr>
-       <tr>
-        <td>59</td>
-        <td><a href="https://github.com/99monisha/javascript-pro/tree/main/59_project-progress-bar">Progress Bar</a></td>
-        <td>july@example.com</td>
-      </tr>
-       <tr>
-        <td>60</td>
-        <td><a href="https://github.com/99monisha/javascript-pro/tree/main/60_project_password-streangth">Password Strength</a></td>
-        <td>july@example.com</td>
-      </tr>
-       <tr>
-        <td>61</td>
-        <td><a href="https://github.com/99monisha/javascript-pro/blob/main/61_project-downloadfile/index.html">File Downloader</a></td>
-        <td>july@example.com</td>
-      </tr>
-       <tr>
-        <td>62</td>
-        <td><a href="https://github.com/99monisha/javascript-pro/blob/main/62_project-visualCounter/index.html">Visual Counter</a></td>
-        <td>july@example.com</td>
-      </tr>
-       <tr>
-        <td>63</td>
-        <td><a href="https://github.com/99monisha/javascript-pro/blob/main/63_project-Random-Meal-Genaretor/index.html">Random Meal Generator</a></td>
-        <td>july@example.com</td>
-      </tr>
-       <tr>
-        <td>64</td>
-        <td><a href="https://github.com/99monisha/javascript-pro/blob/main/64_project-liveVisite-Counter/index.html">Live Visit Counter</a></td>
-        <td>july@example.com</td>
-      </tr>
-       <tr>
-        <td>65</td>
-        <td><a href="https://github.com/99monisha/javascript-pro/blob/main/65_project-liveWordCounter/index.html">Live Word Counter</a></td>
-        <td>july@example.com</td>
-      </tr>
-       <tr>
-        <td>66</td>
-        <td><a href="https://github.com/99monisha/javascript-pro/blob/main/66_project-serachfiltering/index.html">Search Filtering</a></td>
-        <td>july@example.com</td>
-      </tr>
-       <tr>
-        <td>67</td>
-        <td><a href="https://github.com/99monisha/javascript-pro/blob/main/67_project-wordCounterApp/index.html">Word Counter App</a></td>
-        <td>july@example.com</td>
-      </tr>
-       <tr>
-        <td>68</td>
-        <td><a href="https://github.com/99monisha/javascript-pro/blob/main/68_project-RandomPasswordGenerator/index.html">Random Password Generator</a></td>
-        <td>july@example.com</td>
-      </tr>
-       <tr>
-        <td>69</td>
-        <td><a href="https://github.com/99monisha/javascript-pro/blob/main/69_project-pokedex/index.html">PokemonDex</a></td>
-        <td>july@example.com</td>
-      </tr>
-       <tr>
-        <td>70</td>
-        <td><a href="https://github.com/99monisha/javascript-pro/blob/main/70_project-dadJokegenerator/index.html">Dad Joke Generator</a></td>
-        <td>july@example.com</td>
-      </tr>
-       <tr>
-        <td>71</td>
-        <td><a href="https://github.com/99monisha/javascript-pro/blob/main/71_project-Modal/index.html">Modal</a></td>
-        <td>july@example.com</td>
-      </tr>
-       <tr>
-        <td>72</td>
-        <td><a href=""></a></td>
-        <td>july@example.com</td>
-      </tr>
-       <tr>
-        <td>73</td>
-        <td><a href=""></a></td>
-        <td>july@example.com</td>
-      </tr>
-       <tr>
-        <td>74</td>
-        <td><a href=""></a></td>
-        <td>july@example.com</td>
-      </tr>
-       <tr>
-        <td>75</td>
-        <td><a href=""></a></td>
-        <td>july@example.com</td>
-      </tr>
-       <tr>
-        <td>76</td>
-        <td><a href=""></a></td>
-        <td>july@example.com</td>
-      </tr>
-       <tr>
-        <td>77</td>
-        <td><a href=""></a></td>
-        <td>july@example.com</td>
-      </tr>
-       <tr>
-        <td>78</td>
-        <td><a href=""></a></td>
-        <td>july@example.com</td>
-      </tr>
-       <tr>
-        <td>79</td>
-        <td><a href=""></a></td>
-        <td>july@example.com</td>
-      </tr>
-       <tr>
-        <td>80</td>
-        <td><a href=""></a></td>
-        <td>july@example.com</td>
-      </tr>
-       <tr>
-        <td>81</td>
-        <td><a href=""></a></td>
-        <td>july@example.com</td>
-      </tr>
-       <tr>
-        <td>82</td>
-        <td><a href=""></a></td>
-        <td>july@example.com</td>
-      </tr>
-       <tr>
-        <td>83</td>
-        <td><a href=""></a></td>
-        <td>july@example.com</td>
-      </tr>
-       <tr>
-        <td>84</td>
-        <td><a href=""></a></td>
-        <td>july@example.com</td>
-      </tr>
-       <tr>
-        <td>85</td>
-        <td><a href=""></a></td>
-        <td>july@example.com</td>
-      </tr>
-       <tr>
-        <td>86</td>
-        <td><a href=""></a></td>
-        <td>july@example.com</td>
-      </tr>
-       <tr>
-        <td>87</td>
-        <td><a href=""></a></td>
-        <td>july@example.com</td>
-      </tr>
-       <tr>
-        <td>88</td>
-        <td><a href=""></a></td>
-        <td>july@example.com</td>
-      </tr>
-       <tr>
-        <td>89</td>
-        <td><a href=""></a></td>
-        <td>july@example.com</td>
-      </tr>
-       <tr>
-        <td>90</td>
-        <td><a href=""></a></td>
-        <td>july@example.com</td>
-      </tr>
-       <tr>
-        <td>91</td>
-        <td><a href=""></a></td>
-        <td>july@example.com</td>
-      </tr>
-       <tr>
-        <td>92</td>
-        <td><a href=""></a></td>
-        <td>july@example.com</td>
-      </tr>
-       <tr>
-        <td>93</td>
-        <td><a href=""></a></td>
-        <td>july@example.com</td>
-      </tr>
-       <tr>
-        <td>94</td>
-        <td><a href=""></a></td>
-        <td>july@example.com</td>
-      </tr>
-       <tr>
-        <td>95</td>
-        <td><a href=""></a></td>
-        <td>july@example.com</td>
-      </tr>
-       <tr>
-        <td>96</td>
-        <td><a href=""></a></td>
-        <td>july@example.com</td>
-      </tr>
-       <tr>
-        <td>97</td>
-        <td><a href=""></a></td>
-        <td>july@example.com</td>
-      </tr>
-       <tr>
-        <td>98</td>
-        <td><a href=""></a></td>
-        <td>july@example.com</td>
-      </tr>
-       <tr>
-        <td>99</td>
-        <td><a href=""></a></td>
-        <td>july@example.com</td>
-      </tr>
-       <tr>
-        <td>100</td>
-        <td><a href=""></a></td>
-        <td>july@example.com</td>
-      </tr>
+     <tr>
+              <td>38</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/blob/main/38_projectlight-off-on/index.html">Light Off-On</a></td>
+              <td>july@example.com</td>
+            </tr>
+             <tr>
+              <td>39</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/blob/main/39_project-login-page/index.html">Advanced Login Page with Validation</a></td>
+              <td>july@example.com</td>
+            </tr>
+             <tr>
+              <td>40</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/tree/main/3_project-login%20form">Many Light Off-On</a></td>
+              <td>july@example.com</td>
+            </tr>
+      <tr>
+              <td>41</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/blob/main/41_project-open-close-face/index.html">Open Close face</a></td>
+              <td>july@example.com</td>
+            </tr>
+             <tr>
+              <td>42</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/blob/main/42_project-scroll-bar/index.html">Smooth Scroll Bar</a></td>
+              <td>july@example.com</td>
+            </tr>
+             <tr>
+              <td>43</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/tree/main/43_project-simple-calci">Basic Calculator</a></td>
+              <td>july@example.com</td>
+            </tr>
+             <tr>
+              <td>44</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/blob/main/44_project-simple-counter/index.html">Basic Counter</a></td>
+              <td>july@example.com</td>
+            </tr>
+             <tr>
+              <td>45</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/blob/main/45_project-simple-stopwatch/index.html">Stop Watch</a></td>
+              <td>july@example.com</td>
+            </tr>
+             <tr>
+              <td>46</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/blob/main/46_project-slider-Three/index.html">Styling Slider</a></td>
+              <td>july@example.com</td>
+            </tr>
+             <tr>
+              <td>47</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/blob/main/47_project-slider-one/index.html">Fade Slider</a></td>
+              <td>july@example.com</td>
+            </tr>
+             <tr>
+              <td>48</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/blob/main/48-project-slider-video/index.html">Video Slider</a></td>
+              <td>july@example.com</td>
+            </tr>
+             <tr>
+              <td>49</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/blob/main/49-project-sms-sender/index.html">Message Sender</a></td>
+              <td>july@example.com</td>
+            </tr>
+             <tr>
+              <td>50</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/blob/main/50-project-sticky-navbar/index.html">Stickey Navbar</a></td>
+              <td>july@example.com</td>
+            </tr>
+       <td>51</td>
+              <td><a href="https://github.com/99monisha/javascript-pro">Student Marks Calculator</a></td>
+              <td>july@example.com</td>
+            </tr>
+             <tr>
+              <td>52</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/blob/main/52-project-slider-two/index.html">Product Slider</a></td>
+              <td>july@example.com</td>
+            </tr>
+             <tr>
+              <td>53</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/tree/main/53-project-ne%20js%20app">Find Meal Ingredients</a></td>
+              <td>july@example.com</td>
+            </tr>
+             <tr>
+              <td>54</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/blob/main/55-project-student-grade-calculator/index.html">Adv Studen Grade Calci(2)</a></td>
+              <td>july@example.com</td>
+            </tr>
+             <tr>
+              <td>55</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/tree/main/55-project-student-grade-calculator">VAlidate Studen Calci</a></td>
+              <td>july@example.com</td>
+            </tr>
+              <tr>
+              <td>56</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/tree/main/56-project-Timer1">Basic Timer</a></td>
+              <td>july@example.com</td>
+            </tr>
+            <tr>
+              <td>57</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/blob/main/57-project-todo-list/index.html">Advanced Todo List</a></td>
+              <td>july@example.com</td>
+            </tr>
+             <tr>
+              <td>58</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/blob/main/58-project-word-length/index.html">Basic Word Length</a></td>
+              <td>july@example.com</td>
+            </tr>
+            <tr>
+              <td>59</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/tree/main/59_project-progress-bar">Progress Bar</a></td>
+              <td>july@example.com</td>
+            </tr>
+  <tr>
+              <td>60</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/tree/main/60_project_password-streangth">Password Strength</a></td>
+              <td>july@example.com</td>
+            </tr>
+             <tr>
+              <td>61</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/blob/main/61_project-downloadfile/index.html">File Downloader</a></td>
+              <td>july@example.com</td>
+            </tr>
+             <tr>
+              <td>62</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/blob/main/62_project-visualCounter/index.html">Visual Counter</a></td>
+              <td>july@example.com</td>
+            </tr>
+             <tr>
+              <td>63</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/blob/main/63_project-Random-Meal-Genaretor/index.html">Random Meal Generator</a></td>
+              <td>july@example.com</td>
+            </tr>
+             <tr>
+              <td>64</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/blob/main/64_project-liveVisite-Counter/index.html">Live Visit Counter</a></td>
+              <td>july@example.com</td>
+            </tr>
+             <tr>
+              <td>65</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/blob/main/65_project-liveWordCounter/index.html">Live Word Counter</a></td>
+              <td>july@example.com</td>
+            </tr>
+  <tr>
+              <td>66</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/blob/main/66_project-serachfiltering/index.html">Search Filtering</a></td>
+              <td>july@example.com</td>
+            </tr>
+             <tr>
+              <td>67</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/blob/main/67_project-wordCounterApp/index.html">Word Counter App</a></td>
+              <td>july@example.com</td>
+            </tr>
+             <tr>
+              <td>68</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/blob/main/68_project-RandomPasswordGenerator/index.html">Random Password Generator</a></td>
+              <td>july@example.com</td>
+            </tr>
+             <tr>
+              <td>69</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/blob/main/69_project-pokedex/index.html">PokemonDex</a></td>
+              <td>july@example.com</td>
+            </tr>
+             <tr>
+              <td>70</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/blob/main/70_project-dadJokegenerator/index.html">Dad Joke Generator</a></td>
+              <td>july@example.com</td>
+            </tr>
+             <tr>
+              <td>71</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/blob/main/71_project-Modal/index.html">Modal</a></td>
+              <td>july@example.com</td>
+            </tr>
     </tbody>
   </table>
 </div>
