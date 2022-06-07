@@ -11,7 +11,7 @@
     <tbody>
       <tr>
         <td>1</td>
-        <td>Login From<a href="https://github.com/99monisha/javascript-pro/tree/main/1_project-login-from"></td>
+        <td><a href="https://github.com/99monisha/javascript-pro/tree/main/1_project-login-from">Login From</a></td>
         <td>localStorage,eventListeners(),DOM manipulation</td>
       </tr>
       <tr>
