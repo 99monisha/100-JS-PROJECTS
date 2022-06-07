@@ -303,7 +303,7 @@
               <td><a href="https://github.com/99monisha/javascript-pro/tree/main/59_project-progress-bar">Progress Bar</a></td>
               <td>july@example.com</td>
             </tr>
-  <tr>
+               <tr>
               <td>60</td>
               <td><a href="https://github.com/99monisha/javascript-pro/tree/main/60_project_password-streangth">Password Strength</a></td>
               <td>july@example.com</td>
@@ -333,7 +333,7 @@
               <td><a href="https://github.com/99monisha/javascript-pro/blob/main/65_project-liveWordCounter/index.html">Live Word Counter</a></td>
               <td>july@example.com</td>
             </tr>
-  <tr>
+            <tr>
               <td>66</td>
               <td><a href="https://github.com/99monisha/javascript-pro/blob/main/66_project-serachfiltering/index.html">Search Filtering</a></td>
               <td>july@example.com</td>
@@ -361,6 +361,151 @@
              <tr>
               <td>71</td>
               <td><a href="https://github.com/99monisha/javascript-pro/blob/main/71_project-Modal/index.html">Modal</a></td>
+              <td>july@example.com</td>
+            </tr>
+           <tr>
+              <td>72</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/blob/main/72_project-Filter/index.html">Project Filter</a></td>
+              <td>july@example.com</td>
+            </tr>
+             <tr>
+              <td>73</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/blob/main/73_project-tip/index.html">Project Tip</a></td>
+              <td>july@example.com</td>
+            </tr>
+             <tr>
+              <td>74</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/blob/main/74_project-DayWeek/index.html">Day Week</a></td>
+              <td>july@example.com</td>
+            </tr>
+             <tr>
+              <td>75</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/blob/main/75_project-AdditionGame/index.html">Addition Game</a></td>
+              <td>july@example.com</td>
+            </tr>
+             <tr>
+              <td>76</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/blob/main/76_project-Welcome-msg/index.html">Welcome Message</a></td>
+              <td>july@example.com</td>
+            </tr>
+             <tr>
+              <td>77</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/blob/main/77_project-groceryList/index.html">Basic Grocery List</a></td>
+              <td>july@example.com</td>
+            </tr>
+             <tr>
+              <td>78</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/blob/main/78_project-filterStore/index.html">Pet Filtering Store</a></td>
+              <td>july@example.com</td>
+            </tr>
+             <tr>
+              <td>79</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/blob/main/79_project-JokeAj/index.html">Joke with Ajax</a></td>
+              <td>july@example.com</td>
+            </tr>
+             <tr>
+              <td>80</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/blob/main/80_project_personRandomapi/index.html">Person Random Api</a></td>
+              <td>july@example.com</td>
+            </tr>
+  <tr>
+              <td>81</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/tree/main/81_project-papersesorRock">Rock,Paper Seosers</a></td>
+              <td>july@example.com</td>
+            </tr>
+             <tr>
+              <td>82</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/tree/main/82_project-dramkit">DramKit</a></td>
+              <td>july@example.com</td>
+            </tr>
+             <tr>
+              <td>83</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/blob/main/83_project-sortBandname/index.html">Sorting By Band Name</a></td>
+              <td>july@example.com</td>
+            </tr>
+             <tr>
+              <td>84</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/blob/main/84_project-TallyString/index.html">Tally String</a></td>
+              <td>july@example.com</td>
+            </tr>
+             <tr>
+              <td>85</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/blob/main/85_project-ArrayCardio/index.html">Array Cardio</a></td>
+              <td>july@example.com</td>
+            </tr>
+             <tr>
+              <td>86</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/blob/main/86_project-multipleCheckbox/index.html">Multiple Checkbox</a></td>
+              <td>july@example.com</td>
+            </tr>
+             <tr>
+              <td>87</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/blob/main/87_project/index.html">Img Url Collection & Creation</a></td>
+              <td>july@example.com</td>
+            </tr>
+             <tr>
+              <td>88</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/blob/main/88_project-copytext/index.html">Copy Text Mini Project</a></td>
+              <td>july@example.com</td>
+            </tr>
+             <tr>
+              <td>89</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/blob/main/89_project/index.html">Dynamicaly List Time</a></td>
+              <td>july@example.com</td>
+            </tr>
+             <tr>
+              <td>90</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/blob/main/90_project-speechRecognization/index.html">Speech Recognization</a></td>
+              <td>july@example.com</td>
+            </tr>
+             <tr>
+              <td>91</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/blob/main/91_project-basicNotesapp/index.html">Notes app</a></td>
+              <td>july@example.com</td>
+            </tr>
+             <tr>
+              <td>92</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/blob/main/92_project/index.html">Flash Card</a></td>
+              <td>july@example.com</td>
+            </tr>
+             <tr>
+              <td>93</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/blob/main/93_project/index.html">WikiPedia Live Search</a></td>
+              <td>july@example.com</td>
+            </tr>
+             <tr>
+              <td>94</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/blob/main/94_project-password-visibility/index.html">Password Hidden Or Visibility</a></td>
+              <td>july@example.com</td>
+            </tr>
+             <tr>
+              <td>95</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/blob/main/95_project-localTimeShow/index.html">Local Time Show</a></td>
+              <td>july@example.com</td>
+            </tr>
+             <tr>
+              <td>96</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/blob/main/96_project-testimonials/index.html">PopUp Message(Advanced)</a></td>
+              <td>july@example.com</td>
+            </tr>
+             <tr>
+              <td>97</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/blob/main/97_project/index.html">Getting Message</a></td>
+              <td>july@example.com</td>
+            </tr>
+             <tr>
+              <td>98</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/blob/main/98_project-loan-calculator/index.html">Loan Calculator</a></td>
+              <td>july@example.com</td>
+            </tr>
+             <tr>
+              <td>99</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/blob/main/99_project/index.html">Guessing Favurite </a></td>
+              <td>july@example.com</td>
+            </tr>
+             <tr>
+              <td>100</td>
+              <td><a href="https://github.com/99monisha/javascript-pro/blob/main/99_project/index.html">Date Calculator</a></td>
               <td>july@example.com</td>
             </tr>
     </tbody>
